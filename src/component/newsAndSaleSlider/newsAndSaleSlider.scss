@@ -1,0 +1,57 @@
+.sliderSection {
+    display: flex;
+    justify-content: center;
+
+    .newsAndSaleSliderParam {
+        width: 100%;
+        height: 1080px;
+        position: relative;
+
+        .slick-list {
+            height: 100%;
+
+            .slick-track {
+                height: 100%;
+
+
+                .slick-slide {
+                    height: 100%;
+                }
+            }
+        }
+
+        .slick-prev {
+            left: 0px;
+            z-index: 10;
+        }
+
+        .slick-prev:before {
+            content: '〈';
+            color: black;
+            font-size: 50px;
+        }
+
+        .slick-next {
+            right: 30px;
+            z-index: 10;
+        }
+
+        .slick-next::before {
+            content: '〉';
+            color: black;
+            font-size: 50px;
+        }
+
+        .slick-dots {
+            bottom: 0;
+            left: 0;
+            max-width: 200px;
+
+            li {
+                button:before {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import '~typeface-roboto/index.css';
+
+.productCard {
+    width: 440px;
+    height: 540px;
+    padding: 20px;
+    transition: .5s;
+    border: 2px solid rgba(167, 166, 166, 0);
+    cursor: pointer;
+    position: relative;
+
+    .productCardInfo {
+        width: 400px;
+        height: 500px;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+
+        .productCardImgAndSale {
+            color: white;
+            position: relative;
+
+            .productCardSale {
+                background: grey;
+                position: absolute;
+                top: 0;
+                width: 80px;
+                height: 40px;
+                padding: 7px 0;
+                text-align: center;
+                right: 0;
+            }
+
+            .productCardNewProduct {
+                background-color: black;
+                position: absolute;
+                top: 40px;
+                min-width: 150px;
+                height: 30px;
+
+            }
+
+            .productCardPreorder {
+                background-color: gray;
+                position: absolute;
+                min-width: 150px;
+                height: 30px;
+                padding: auto;
+
+            }
+
+            .productCardImg {
+                width: 400px;
+                height: 400px;
+                transition: .5s;
+            }
+
+        }
+
+    }
+
+    .productCardName {
+        font-size: 33px;
+    }
+
+    .productCardPrice {
+
+        font-size: 27px;
+        font-weight: bolder;
+    }
+
+    .formerPrice {
+        position: absolute;
+        font-size: 24px;
+        color: grey;
+        bottom: 38px;
+        left: 150px;
+
+        .deleteLinear {
+            height: 0;
+            transform: translate(0, 19px);
+            border: 2px solid grey;
+        }
+    }
+}
+
+.productCard:hover {
+    border: 2px solid rgb(167, 166, 166);
+    transform: scale(1.01);
+}

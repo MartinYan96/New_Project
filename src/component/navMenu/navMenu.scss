@@ -1,0 +1,82 @@
+.navMenu {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    padding-left: 50px;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 100;
+
+    .navSictionsMenu {
+        display: flex;
+        height: 80px;
+
+        .navMenuSections {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            font-weight: 500;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            .downIcon {
+                margin-left: 10px;
+            }
+
+            .navMenuSectionsCategorys {
+                display: flex;
+                background: white;
+                position: absolute;
+                flex-direction: column;
+                text-align: left;
+                width: max-content;
+                top: 47px;
+                transition: all 0.5s ease;
+                font-size: 0;
+                border: 0;
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                cursor: default;
+
+                .categories {
+                    cursor: pointer;
+                    margin: 3px 0;
+                    color: black;
+                }
+
+                .categories:hover {
+                    transition: all 0.5s ease;
+                    color: grey;
+                    transform: scale(1.1);
+                }
+            }
+
+            .navMenuSectionsCategorys.active {
+                font-size: 17px;
+                border: 1px solid black;
+                height: auto;
+                padding: 20px 35px;
+                cursor: default;
+
+            }
+        }
+
+        .navMenuSections:hover {
+            color: grey;
+        }
+
+        .sectionCategory {
+            cursor: pointer;
+        }
+
+    }
+
+    .search {
+        margin-right: 50px;
+        cursor: pointer;
+    }
+}
