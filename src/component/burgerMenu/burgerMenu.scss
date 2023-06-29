@@ -1,5 +1,5 @@
-.burgerMenuSection{
-width: 200px;
+.burgerMenuSection {
+    width: 200px;
 
     .burgerMenu {
         width: 40px;
@@ -10,7 +10,7 @@ width: 200px;
         cursor: pointer;
         position: relative;
         overflow: hidden;
-    
+
         .burgerLiner1,
         .burgerLiner2,
         .burgerLiner3 {
@@ -22,37 +22,37 @@ width: 200px;
             width: 40px;
             border: 1px solid white;
         }
-    
+
         .burgerLiner1 {
             top: 7px;
             left: 0px;
         }
-    
+
         .burgerLiner2 {
             top: 17px;
             left: 0;
         }
-    
+
         .burgerLiner3 {
             top: 27px;
             left: 0;
         }
     }
-    
-    
+
+
     .burgerMenu.active {
-    
+
         .burgerLiner1 {
             width: 51px;
             transform: rotateZ(45deg);
             top: 18px;
             left: -6.5px;
         }
-    
+
         .burgerLiner2 {
             opacity: 0;
         }
-    
+
         .burgerLiner3 {
             width: 51px;
             transform: rotateZ(-45deg);

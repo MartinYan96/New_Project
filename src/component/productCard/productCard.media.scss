@@ -310,3 +310,67 @@
 
     }
 }
+
+@media screen and (min-width:280px) and (max-width:319px) and (max-height:1000px) {
+    .productCard {
+        width: 110px;
+        height:auto;
+        padding: 7px;
+
+        .productCardInfo {
+            width: 90px;
+            height: auto;
+
+            .productCardImgAndSale {
+                .productCardSale {
+                    font-size: 7px;
+                    padding: 2.5px 10px;
+                }
+
+                .productCardNewProduct {
+                    font-size: 7px;
+                    padding: 2.5px 10px;
+                    top: 15px;
+                }
+
+                .productCardPreorder {
+                    font-size: 7px;
+                    padding: 2.5px 10px;
+
+                }
+
+                .productCardImg {
+                    width: 90px;
+                    height: 90px;
+                }
+
+            }
+
+        }
+
+        .productCardName {
+            font-size: 14px;
+        }
+
+        .productCardprices {
+            padding-right: 20px;
+
+            .productCardPrice {
+                font-size: 11px;
+            }
+
+            .formerAndSalePrice {
+                margin-left: 10px;
+                font-size: 9px;
+                padding: 3px;
+
+                .deleteLinear {
+                    transform: translate(0, 6px);
+                    border: .5px solid grey;
+                }
+            }
+
+        }
+
+    }
+}

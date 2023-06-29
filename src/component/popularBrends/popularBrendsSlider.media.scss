@@ -82,13 +82,15 @@
             .slick-list {
                 .slick-track {
                     .slick-slide {
+                        display: block;
+             
                         div {
                             .popularBrendsImages {
-                                width: 40px;
+                                width: 45px;
                                 height: 25px;
 
                                 img {
-                                    width: 40px;
+                                    width: 45px;
                                     height: 25px;
                                 }
                             }

@@ -16,7 +16,6 @@
     }
     .button {
         font-size: 13px;
-        display: flex;
         padding: 15px 35px;
     }
     .titleSection {
@@ -25,22 +24,23 @@
     }
 }
 
-
+@media screen and (max-width:1279px){
+    .app {
+        position: relative;
+    }
+}
 @media screen and (min-width: 1024px) and (max-width:1279px){
     .app {
         width: 1024px;
-        position: relative;
     }
 }
 
 @media screen and (min-width: 720px) and (max-width:1023px){
     .app {
         width: 720px;
-        position: relative;
     }
     .button {
         font-size: 11px;
-        display: flex;
         padding: 10px 25px;
     }
     .titleSection {
@@ -48,14 +48,18 @@
         margin: 20px 0;
     }
 }
+@media screen and (min-width: 720px) and (max-width:1023px) and (max-height:500px){
+    .app {
+        width: 100%;
+    }
+}
+
 @media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px) {
     .app {
         width: 500px;
-        position: relative;
     }
     .button {
         font-size: 11px;
-        display: flex;
         padding: 5px 15px;
     }
     .titleSection {
@@ -67,11 +71,9 @@
 @media screen and (max-width:499px) and (max-height:1000px) {
     .app {
         width: 100%;
-        position: relative;
     }
     .button {
         font-size: 9px;
-        display: flex;
         padding: 5px 15px;
     }
     .titleSection {

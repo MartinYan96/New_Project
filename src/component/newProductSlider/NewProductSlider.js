@@ -24,6 +24,8 @@ const NewProductSlider = () => {
     const tabletSize = useMediaQuery({ maxWidth: 719 });
     const veryBigPhoneSize = useMediaQuery({ maxWidth: 499 });
     const bigPhoneSize = useMediaQuery({ maxWidth: 460 });
+    const smolePhoneSize = useMediaQuery({ maxWidth: 319 });
+
 
 
     // const tabletHeightSize = useMediaQuery({ maxWidth: 1000 });
@@ -56,6 +58,10 @@ const NewProductSlider = () => {
             setslideQuantity(2)
         }
     }, [bigPhoneSize])
+
+    // useEffect(() => {
+    //     setslideQuantity(1)
+    // },[smolePhoneSize])
 
     const data = {
         img: [slide1, slide2, slide3, slide4, woomenSlide1, woomenSlide2, woomenSlide3, woomenSlide4, woomenSlide5,],

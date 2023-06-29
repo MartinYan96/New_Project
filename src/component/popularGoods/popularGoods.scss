@@ -9,26 +9,36 @@
     .popularGoodsSections {
         display: flex;
         position: relative;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
         margin: 50px 0;
         border-bottom: 1px solid grey;
         height: 80px;
         cursor: pointer;
+        white-space: nowrap;
 
         .popularGoodsSection {
-            width: 265px;
+            width: auto;
             font-size: 20px;
+            margin-right: 50px ;
             transition: .5s;
         }
 
         .popularGoodsSectionActive {
-            width: 265px;
-            font-size: 22px;
+            width:auto ;
+            font-size: 20px;
+            margin-right: 50px ;
             color: gray;
+            border-bottom: 1px solid grey;
             transition: .5s;
         }
 
     }
+
+    .popularGoodsSections:active {
+        outline: none;
+        background-color: transparent;
+    }
+
 
     .popularGoodsList {
         display: flex;

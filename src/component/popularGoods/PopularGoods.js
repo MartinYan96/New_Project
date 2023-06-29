@@ -8,15 +8,12 @@ import img from '../../resources/img/2.jpg'
 const PopularGoods = () => {
     const popularGoodsSections = textsEng.navMenuSections.slice(0, 6)
 
-    const [popularGoodsSectionActive, setPopularGoodsSectionActive] = useState(null);
-    
+    const [popularGoodsSectionActive, setPopularGoodsSectionActive] = useState(0);
+
     const handleMouseEnter = (index) => {
-        setPopularGoodsSectionActive(index);
+        !popularGoodsSectionActive ? setPopularGoodsSectionActive(index) : setPopularGoodsSectionActive(index);
     };
 
-    const handleMouseLeave = () => {
-        setPopularGoodsSectionActive(null);
-    };
     return (
         <section className='popularGoods'>
             <h2 className='titleSection'>{textsEng.sectionsTexts[2].name}</h2>
@@ -25,17 +22,17 @@ const PopularGoods = () => {
                     return (
                         <li className={popularGoodsSectionActive === index ? 'popularGoodsSectionActive' : 'popularGoodsSection'}
                             key={index}
-                            onMouseEnter={() => handleMouseEnter(index)}
-                            onMouseLeave={handleMouseLeave}>
+                            onClick={() => handleMouseEnter(index)}
+                        >
                             {section.title}
                         </li>
                     )
                 })}
             </ul>
-            <div className='popularGoodsList'> 
+            <div className='popularGoodsList'>
                 {textsEng.navMenuSections.map((section, index) => {
                     return (
-                       <ProductCard key={index} img={img} />
+                        <ProductCard key={index} img={img} />
                     )
                 })}
             </div>
