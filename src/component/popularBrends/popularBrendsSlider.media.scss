@@ -1,0 +1,101 @@
+@media screen and (min-width: 1024px) and (max-width:1279px) {
+    .sliderSection {
+        .poularBrendsSlider {
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        div {
+                            .popularBrendsImages {
+                                width: 140px;
+                                height: 100px;
+
+                                img {
+                                    width: 140px;
+                                    height: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width:1023px) {
+    .sliderSection {
+        .poularBrendsSlider {
+            height: 150px;
+
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        div {
+                            .popularBrendsImages {
+                                width: 100px;
+                                height: 60px;
+
+                                img {
+                                    width: 100px;
+                                    height: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px) {
+    .sliderSection {
+        .poularBrendsSlider {
+            height: 100px;
+
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        div {
+                            .popularBrendsImages {
+                                width: 60px;
+                                height: 40px;
+
+                                img {
+                                    width: 60px;
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:499px) and (max-height:1000px) {
+    .sliderSection {
+        .poularBrendsSlider {
+            height: 80px;
+
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        div {
+                            .popularBrendsImages {
+                                width: 40px;
+                                height: 25px;
+
+                                img {
+                                    width: 40px;
+                                    height: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

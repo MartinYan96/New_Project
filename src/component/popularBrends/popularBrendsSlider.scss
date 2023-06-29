@@ -21,43 +21,22 @@
                 .slick-slide {
                     height: 100%;
                     margin: 0 1px;
-                    div{
-                        .popularBrendsImages{
-                            width: 250px;
-                            height: 150px;
-                            img{
-                                width: 250px;
-                                height: 150px;
+                    display: flex;
+                    justify-content: center;
+
+                    div {
+                        .popularBrendsImages {
+                            width: 200px;
+                            height: 120px;
+
+                            img {
+                                width: 200px;
+                                height: 120px;
                             }
                         }
                     }
                 }
             }
-        }
-
-
-        .slick-prev {
-            left: -10px;
-            z-index: 10;
-        }
-
-        .slick-prev:before {
-            color: black;
-            font-size: 33px;
-        }
-
-        .slick-next {
-            right: -10px;
-            z-index: 10;
-        }
-
-        .slick-next:before {
-            color: black;
-            font-size: 33px;
-        }
-
-        .slick-dots {
-            bottom: -50px;
         }
     }
 }

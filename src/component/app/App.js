@@ -1,4 +1,5 @@
 import './app.scss'
+import './app.media.scss'
 import NavMenu from '../navMenu/NavMenu'
 import Header from '../header/Header'
 import NewsAndSaleSlider from '../newsAndSaleSlider/NewsAndSaleSlider'
@@ -8,8 +9,8 @@ import Sales from '../sales/Sales'
 import PopularBrends from '../popularBrends/PopularBrends'
 import Footer from '../footer/Footer'
 
-const App = () => {
 
+const App = () => {
     return (
         <div className='app'>
             <Header />

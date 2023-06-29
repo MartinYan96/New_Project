@@ -1,11 +1,13 @@
 .sales{
-    margin-top: 150px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: white;
     padding:  50px;
     .salesList{
         display: flex;
+        justify-content: center;
         width: 100%;
         flex-wrap: wrap;
         gap: 20px;

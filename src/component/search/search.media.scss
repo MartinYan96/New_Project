@@ -1,0 +1,39 @@
+@media screen and (min-width: 1024px) and (max-width:1279px){
+    .search {
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+        height: 45px;
+        align-items: center;
+        border: 1px solid grey;
+    
+        form {
+            transition: .5s;
+    
+            .searchInput {
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-radius: 10px;
+                padding-left: 10px;
+            }
+    
+            .searchInput::placeholder {
+                color: grey;
+            }
+            .searchInput:focus{
+                outline: none;
+            }
+    
+        }
+    
+        .searchIcon {
+            font-size: 17px;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
+}

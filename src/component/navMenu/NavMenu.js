@@ -1,12 +1,14 @@
 import './navMenu.scss'
+import './navMenu.media.scss'
 import { useState } from 'react';
 import { textsEng } from '../../resources/textAndLanguage/textAndLanguage';
-import { FaSearch } from 'react-icons/fa'
 import { FiChevronDown } from 'react-icons/fi'
-
+import { useMediaQuery } from 'react-responsive'
+import Search from '../search/Search';
 
 const NavMenu = () => {
-    const { navMenuSectionsEng } = textsEng
+    const { navMenuSections } = textsEng
+    const tabletSize = useMediaQuery({ maxWidth: 1024 });
 
     const [activeSubMenu, setActiveSubMenu] = useState(null);
 
@@ -21,7 +23,8 @@ const NavMenu = () => {
     return (
         <nav className='navMenu'>
             <ul className='navSictionsMenu'>
-                {navMenuSectionsEng.map((item, index) => {
+                {tabletSize ? <Search /> : ''}
+                {navMenuSections.map((item, index) => {
                     return (
                         <li
                             className='navMenuSections'
@@ -30,7 +33,7 @@ const NavMenu = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             {item.title}
-                            {item.subMenu.length > 0 && <FiChevronDown className='downIcon' />}
+                            {item.subMenu.length > 0 && <FiChevronDown className={activeSubMenu === index ? 'downIcon active' : 'downIcon'} />}
                             {item.subMenu.length > 0 &&
                                 <ul
                                     className={activeSubMenu === index ? 'navMenuSectionsCategorys active' : 'navMenuSectionsCategorys'}
@@ -48,7 +51,7 @@ const NavMenu = () => {
                 )
                 }
             </ul>
-            <FaSearch className='search' />
+            {!tabletSize ? <Search /> : ''}
         </nav>
 
     );

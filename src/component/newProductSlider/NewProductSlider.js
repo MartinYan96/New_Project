@@ -1,4 +1,5 @@
 import './newProductSlider.scss'
+import './newProductSlider.media.scss'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
@@ -12,12 +13,50 @@ import woomenSlide2 from '../../resources/img/woomen2.jpeg'
 import woomenSlide3 from '../../resources/img/woomen3.jpeg'
 import woomenSlide4 from '../../resources/img/woomen4.jpeg'
 import woomenSlide5 from '../../resources/img/woomen5.jpeg'
-
-
-
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 
 const NewProductSlider = () => {
+    const [slideQuantity, setslideQuantity] = useState(4);
+    const dekstopAndTabletLandscapeResize = useMediaQuery({ maxWidth: 1279 });
+    const tabletSize = useMediaQuery({ maxWidth: 719 });
+    const veryBigPhoneSize = useMediaQuery({ maxWidth: 499 });
+    const bigPhoneSize = useMediaQuery({ maxWidth: 460 });
+
+
+    // const tabletHeightSize = useMediaQuery({ maxWidth: 1000 });
+
+
+    useEffect(() => {
+        if (dekstopAndTabletLandscapeResize) {
+            setslideQuantity(3)
+        } else {
+            setslideQuantity(4)
+        }
+
+    }, [dekstopAndTabletLandscapeResize, tabletSize]);
+    
+    useEffect(() => {
+        if (tabletSize) {
+            setslideQuantity(2)
+        }
+    }, [tabletSize])
+
+    
+    useEffect(() => {
+        if (veryBigPhoneSize) {
+            setslideQuantity(3)
+        }
+    }, [veryBigPhoneSize])
+    
+    useEffect(() => {
+        if (bigPhoneSize) {
+            setslideQuantity(2)
+        }
+    }, [bigPhoneSize])
+
     const data = {
         img: [slide1, slide2, slide3, slide4, woomenSlide1, woomenSlide2, woomenSlide3, woomenSlide4, woomenSlide5,],
     }
@@ -26,11 +65,11 @@ const NewProductSlider = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: slideQuantity,
         slidesToScroll: 1,
-        autoplay: true,
-        className: 'newProductsParam',
+        autoplay: false,
         arrows: false,
+        className: 'newProductsParam',
     };
 
     return (

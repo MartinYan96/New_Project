@@ -1,0 +1,134 @@
+@media screen and (min-width: 1280px) and (max-width:1599px) {
+    .navMenu {
+        .navSictionsMenu {
+            height: 70px;
+
+            .navMenuSections {
+                font-size: 12px;
+
+                .navMenuSectionsCategorys {
+                    font-size: 0;
+
+                    .categories {
+                        font-size: 0px;
+
+                    }
+                }
+
+                .navMenuSectionsCategorys.active {
+                    border: 1px solid black;
+                    height: auto;
+                    padding: 20px 35px;
+                    cursor: default;
+
+                    .categories {
+                        font-size: 11px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:320px) and (max-width:1279px) {
+    .navMenu{
+        display: none;
+    } 
+}
+@media screen and (min-width: 1024px) and (max-width:1279px) {
+    .navMenu {
+        position: absolute;
+        width: 100%;
+        background: #00000059;
+        padding: 0;
+        align-items: flex-start;
+        height: 100%;
+        top: 200px;
+        left: 0;
+
+
+        .navSictionsMenu {
+            padding: 50px;
+            background: white;
+            height: auto;
+            flex-direction: column;
+            gap: 30px;
+            height: 100%;
+
+            .navMenuSections {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                // height: 20px;
+                margin-right: 0px;
+                font-weight: 500;
+                font-size: 20px;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.5s ease;
+
+                .downIcon {
+                    margin-left: 0;
+                }
+
+                .navMenuSectionsCategorys {
+                    display: flex;
+                    background: rgb(246, 246, 246);
+                    position: static;
+                    flex-direction: column;
+                    text-align: left;
+                    width: max-content;
+                    top: 47px;
+                    transition: all 0.5s ease;
+                    font-size: 0;
+                    border: 0;
+                    width: 100%;
+                    height: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    cursor: default;
+
+                    .categories {
+                        display: flex;
+                        justify-content: center;
+                        cursor: pointer;
+                        margin: 3px 0;
+                        color: black;
+                    }
+
+                    .categories:hover {
+                        transition: all 0.5s ease;
+                        color: grey;
+                        transform: scale(1.05);
+                    }
+                }
+
+                .navMenuSectionsCategorys.active {
+                    font-size: 17px;
+                    border: 1px solid grey;
+                    height: auto;
+                    padding: 20px 35px;
+                    cursor: default;
+                    width: 100%;
+
+                }
+            }
+
+            .navMenuSections:hover {
+                color: grey;
+            }
+
+            .sectionCategory {
+                cursor: pointer;
+            }
+
+        }
+
+        .search {
+            margin-right: 50px;
+            cursor: pointer;
+        }
+    }
+}

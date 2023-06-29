@@ -1,0 +1,135 @@
+@media screen and (min-width: 1024px) and (max-width:1599px) {
+    .imagesBlok {
+        height: 720px;
+
+        .saleProductInfos {
+            .imgAndSelectToPage {
+                .saleProductInfo {
+                    .selectToPage {
+                        .saleTitle {
+                            font-size: 35px;
+                        }
+                    }
+
+                    .slideNumber {
+                        font-size: 35px;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+@media screen and (min-width: 720px) and (max-width:1023px) {
+    .imagesBlok {
+        height: 490px;
+
+        .saleProductInfos {
+            .imgAndSelectToPage {
+                .saleProductInfo {
+
+                    .salePercent {
+                        padding: 7px 20px;
+                        font-size: 11px;
+                    }
+
+                    .selectToPage {
+                        .saleTitle {
+                            font-size: 17px;
+                        }
+
+                        .saleDiscription {
+                            font-size: 11px;
+                        }
+                    }
+
+                    .slideNumber {
+                        font-size: 15px;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px) {
+    .imagesBlok {
+        height: 356px;
+
+        .saleProductInfos {
+            padding: 45px;
+
+            .imgAndSelectToPage {
+                .saleProductInfo {
+                    padding: 0;
+
+                    .salePercent {
+                        padding: 7px 20px;
+                        font-size: 11px;
+                    }
+
+                    .selectToPage {
+
+                        .saleTitle {
+                            font-size: 17px;
+                        }
+
+                        .saleDiscription {
+                            font-size: 11px;
+                            margin: 30px 0;
+                        }
+                    }
+
+                    .slideNumber {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width:499px) and (max-height:1000px) {
+    .imagesBlok {
+        height: 330px;
+
+        .saleProductInfos {
+            padding: 35px;
+
+            .imgAndSelectToPage {
+                .saleProductInfo {
+                    padding: 0;
+
+                    .salePercent {
+                        padding: 7px 20px;
+                        font-size: 9px;
+                    }
+
+                    .selectToPage {
+                        padding-right: 1px;
+
+                        .saleTitle {
+                            font-size: 14px;
+                        }
+
+                        .saleDiscription {
+                            font-size: 9px;
+                            margin: 30px 0;
+                        }
+                    }
+
+                    .slideNumber {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

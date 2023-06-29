@@ -1,0 +1,47 @@
+@media screen and (min-width: 1280px) and (max-width:1599px) {
+    .header {
+        height: 150px;
+
+        .logo {
+            height: 150px;
+        }
+
+        .RegisterloginButtons {
+            font-size: 14px;
+
+        }
+
+    }
+}
+@media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px) {
+    .header {
+        height: 100px;
+
+        .logo {
+            height: 70px;
+        }
+
+        .RegisterloginButtons {
+            font-size: 11px;
+            width: 100px;
+        }
+
+    }
+}
+
+@media screen and (max-width:499px) and (max-height:1000px) {
+    .header {
+        height: 90px;
+        padding:0 30px ;
+
+        .logo {
+            height: 60px;
+        }
+
+        .RegisterloginButtons {
+            font-size: 9px;
+            width: 80px;
+        }
+
+    }
+}

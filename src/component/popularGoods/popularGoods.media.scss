@@ -1,0 +1,97 @@
+@media screen and (min-width: 1024px) and (max-width:1599px) {
+    .popularGoods {    
+        .popularGoodsSections {   
+            height: 50px;
+            .popularGoodsSection {
+                width: 165px;
+                font-size: 12px;
+            }
+            .popularGoodsSectionActive {
+                width: 165px;
+                font-size: 13px;
+            }
+    
+        }
+    
+        .popularGoodsList {
+            gap: 20px;
+        }
+    }
+}
+@media screen and (min-width: 720px) and (max-width:1023px){
+    .popularGoods {    
+        .popularGoodsSections {   
+            height: 50px;
+            gap: 50px;
+
+            .popularGoodsSection {
+                width:auto;
+                font-size: 11px;
+            }
+            .popularGoodsSectionActive {
+                width:auto;
+                font-size: 13px;
+            }
+    
+        }
+    
+        .popularGoodsList {
+            gap: 10px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px){
+
+        .popularGoods {    
+            .popularGoodsSections {   
+                gap: 15px;
+                height: 40px;
+                padding-bottom: 20px;
+                margin:30px 0;
+    
+                .popularGoodsSection {
+                    width:auto;
+                    font-size: 9px;
+                }
+                .popularGoodsSectionActive {
+                    width:auto;
+                    font-size: 13px;
+                }
+        
+            }
+        
+            .popularGoodsList {
+                gap: 10px;
+            }
+        }
+    
+    
+}
+
+@media screen and (max-width:499px) and (max-height:1000px) {
+    .popularGoods {   
+        padding: 20px; 
+        .popularGoodsSections {   
+            gap: 15px;
+            height: 40px;
+            padding-bottom: 20px;
+            margin:30px 0;
+
+            .popularGoodsSection {
+                width:auto;
+                font-size: 7px;
+            }
+            .popularGoodsSectionActive {
+                width:auto;
+                font-size: 8px;
+            }
+    
+        }
+    
+        .popularGoodsList {
+            gap: 10px;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import './newsAndSale.scss'
+import './newsAndSale.media.scss'
 
 const NewsAndSale = ({ data, index }) => {
     const slideNumber = index + 1
@@ -20,9 +21,14 @@ const NewsAndSale = ({ data, index }) => {
                             </h5>
                             <button className='button'>Перейти</button>
                         </div>
-                        <p className='slideNumber'>0{slideNumber }</p>
+                        <p className='slideNumber'>0{slideNumber}</p>
                     </div>
-                    <img src={data} alt="" />
+                    <div className='img'>
+                        <div>
+                            <img src={data} alt="" />
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
     position: sticky;
     top: 0px;
     display: flex;
-    padding-left: 50px;
+    padding: 0 50px;
     border-bottom: 1px solid black;
     align-items: center;
     justify-content: space-between;
@@ -24,6 +24,10 @@
 
             .downIcon {
                 margin-left: 10px;
+            }
+
+            .downIcon.active {
+                transform: rotate(180deg);
             }
 
             .navMenuSectionsCategorys {
@@ -51,7 +55,7 @@
                 .categories:hover {
                     transition: all 0.5s ease;
                     color: grey;
-                    transform: scale(1.1);
+                    transform: scale(1.05);
                 }
             }
 
@@ -73,10 +77,5 @@
             cursor: pointer;
         }
 
-    }
-
-    .search {
-        margin-right: 50px;
-        cursor: pointer;
     }
 }

@@ -7,7 +7,6 @@
     transition: .5s;
     border: 2px solid rgba(167, 166, 166, 0);
     cursor: pointer;
-    position: relative;
 
     .productCardInfo {
         width: 400px;
@@ -21,14 +20,13 @@
         .productCardImgAndSale {
             color: white;
             position: relative;
+            margin-bottom: 20px;
 
             .productCardSale {
-                background: grey;
+                background: rgb(234, 200, 8);
                 position: absolute;
                 top: 0;
-                width: 80px;
-                height: 40px;
-                padding: 7px 0;
+                padding: 5px 20px;
                 text-align: center;
                 right: 0;
             }
@@ -37,18 +35,14 @@
                 background-color: black;
                 position: absolute;
                 top: 40px;
-                min-width: 150px;
-                height: 30px;
+                padding: 5px 20px;
 
             }
 
             .productCardPreorder {
                 background-color: gray;
                 position: absolute;
-                min-width: 150px;
-                height: 30px;
-                padding: auto;
-
+                padding: 5px 20px;
             }
 
             .productCardImg {
@@ -65,25 +59,33 @@
         font-size: 33px;
     }
 
-    .productCardPrice {
+    .productCardprices {
+        display: flex;
+        align-items: center;
+        padding-right: 50px;
 
-        font-size: 27px;
-        font-weight: bolder;
-    }
-
-    .formerPrice {
-        position: absolute;
-        font-size: 24px;
-        color: grey;
-        bottom: 38px;
-        left: 150px;
-
-        .deleteLinear {
-            height: 0;
-            transform: translate(0, 19px);
-            border: 2px solid grey;
+        .productCardPrice {
+            font-size: 27px;
+            font-weight: bolder;
         }
+
+        .formerAndSalePrice {
+            font-size: 24px;
+            color: grey;
+            padding-bottom: 5px;
+            margin-left: 30px;
+            left: 150px;
+
+            .deleteLinear {
+                height: 0;
+                transform: translate(0, 16.5px);
+                border: 2px solid grey;
+            }
+        }
+
+
     }
+
 }
 
 .productCard:hover {

@@ -1,0 +1,61 @@
+@media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px),
+(max-width:499px) and (max-height:1000px) {
+    .burgerMenuSection {
+        width: 100px;
+
+        .burgerMenu {
+            width: 20px;
+            height: 20px;
+
+            .burgerLiner1,
+            .burgerLiner2,
+            .burgerLiner3 {
+                width: 20px;
+
+            }
+
+            .burgerLiner1 {
+                top: 3.5px;
+
+            }
+
+            .burgerLiner2 {
+                top: 8.5px;
+
+            }
+
+            .burgerLiner3 {
+                top: 13.5px;
+
+            }
+        }
+
+
+        .burgerMenu.active {
+
+            .burgerLiner1 {
+                width: 25.5px;
+                transform: rotateZ(45deg);
+                top: 9px;
+                left: -3.25px;
+            }
+
+            .burgerLiner2 {
+                opacity: 0;
+            }
+
+            .burgerLiner3 {
+                width: 25.5px;
+                transform: rotateZ(-45deg);
+                top: 9px;
+                left: -3.25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:499px) and (max-height:1000px) {
+    .burgerMenuSection {
+        width: 80px;
+    }
+}

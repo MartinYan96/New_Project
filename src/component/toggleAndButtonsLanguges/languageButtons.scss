@@ -1,0 +1,16 @@
+.languages {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+
+    .language {
+        margin: 0 5px;
+        cursor: pointer;
+        transition: .3s;
+        font-size: 20px;
+    }
+    .language:hover{
+        color: grey;
+    }
+}
