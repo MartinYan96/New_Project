@@ -1,11 +1,9 @@
 @media screen and (min-width: 1600px) and (max-width:1919px) {
     .productCard {
         width: 350px;
-        height: 431.5px;
 
         .productCardInfo {
             width: 310px;
-            height: auto;
 
             .productCardImgAndSale {
                 .productCardSale {
@@ -55,14 +53,12 @@
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width:1599px) {
+@media screen and (min-width: 1280px) and (max-width:1599px) {
     .productCard {
         width: 280px;
-        height: 361.5px;
 
         .productCardInfo {
             width: 240px;
-            height: auto;
 
             .productCardImgAndSale {
                 .productCardSale {
@@ -70,39 +66,32 @@
                 }
 
                 .productCardNewProduct {
-                    font-size: 13px;
-                    top: 35px;
+                    font-size: 10px;
+                    top: 25px;
                 }
 
                 .productCardPreorder {
-                    font-size: 13px;
+                    font-size: 10px;
                 }
-
-                .productCardImg {
-                    width: 240px;
-                    height: 240px;
-                    transition: .5s;
-                }
-
             }
 
         }
 
         .productCardName {
-            font-size: 23px;
+            font-size: 13px;
         }
 
         .productCardprices {
             .productCardPrice {
-                font-size: 18px;
+                font-size: 15px;
             }
 
             .formerAndSalePrice {
-                font-size: 15px;
+                font-size: 13px;
                 padding: 3px;
 
                 .deleteLinear {
-                    transform: translate(0, 9.5px);
+                    transform: translate(0, 8.5px);
                     border: 1px solid grey;
                 }
             }
@@ -113,26 +102,73 @@
 
 }
 
+@media screen and (min-width: 1024px) and (max-width:1279px) {
+    .productCard {
+        width: 240px;
+        padding: 10px;
+
+        .productCardInfo {
+            width: 215.5px;
+
+            .productCardImgAndSale {
+                .productCardSale {
+                    font-size: 13px;
+                }
+
+                .productCardNewProduct {
+                    font-size: 10px;
+                    top: 25px;
+                }
+
+                .productCardPreorder {
+                    font-size: 10px;
+                }
+            }
+
+        }
+
+        .productCardName {
+            font-size: 13px;
+        }
+
+        .productCardprices {
+            .productCardPrice {
+                font-size: 15px;
+            }
+
+            .formerAndSalePrice {
+                font-size: 13px;
+                padding: 3px;
+
+                .deleteLinear {
+                    transform: translate(0, 8.5px);
+                    border: 1px solid grey;
+                }
+            }
+
+        }
+
+    }
+}
+
 @media screen and (min-width: 720px) and (max-width:1023px) {
     .productCard {
         width: 190px;
-        height: 254px;
         padding: 10px;
 
         .productCardInfo {
             width: 165px;
-            height: auto;
 
             .productCardImgAndSale {
                 .productCardSale {
-                    font-size: 8px;
+                    font-size: 11px;
                     padding: 2.5px 10px;
                 }
 
                 .productCardNewProduct {
                     font-size: 8px;
                     padding: 2.5px 10px;
-                    top: 25px;
+                    top: 20px;
                 }
 
                 .productCardPreorder {
@@ -141,35 +177,28 @@
 
                 }
 
-                .productCardImg {
-                    width: 165px;
-                    height: 165px;
-                    transition: .5s;
-                }
 
             }
 
         }
 
         .productCardName {
-            font-size: 17px;
+            font-size: 11px;
         }
 
         .productCardprices {
-            padding-right: 20px;
-
             .productCardPrice {
-                font-size: 15px;
+                font-size: 13px;
             }
 
             .formerAndSalePrice {
                 margin-left: 20px;
-                font-size: 10px;
+                font-size: 11px;
                 padding: 3px;
 
                 .deleteLinear {
-                    transform: translate(0, 7px);
-                    border: 1px solid grey;
+                    transform: translate(0, 6px);
+                    border: .5px solid grey;
                 }
             }
 
@@ -184,28 +213,26 @@
 @media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px) {
     .productCard {
         width: 190px;
-        height: 254px;
         padding: 10px;
 
         .productCardInfo {
             width: 165px;
-            height: auto;
 
             .productCardImgAndSale {
                 .productCardSale {
-                    font-size: 8px;
-                    padding: 2.5px 10px;
+                    font-size: 11px;
+                    padding: 3px 10px;
                 }
 
                 .productCardNewProduct {
                     font-size: 8px;
-                    padding: 2.5px 10px;
-                    top: 25px;
+                    padding: 3px 10px;
+                    top: 20px;
                 }
 
                 .productCardPreorder {
                     font-size: 8px;
-                    padding: 2.5px 10px;
+                    padding: 3px 10px;
 
                 }
 
@@ -220,19 +247,19 @@
         }
 
         .productCardName {
-            font-size: 17px;
+            font-size: 11px;
         }
 
         .productCardprices {
             padding-right: 20px;
 
             .productCardPrice {
-                font-size: 15px;
+                font-size: 13px;
             }
 
             .formerAndSalePrice {
-                margin-left: 20px;
-                font-size: 10px;
+                margin-left: 15px;
+                font-size: 11px;
                 padding: 3px;
 
                 .deleteLinear {
@@ -250,16 +277,14 @@
 @media screen and (max-width:499px) and (max-height:1000px) {
     .productCard {
         width: 135px;
-        height: 194px;
         padding: 7px;
-
         .productCardInfo {
             width: 117px;
-            height: auto;
+
 
             .productCardImgAndSale {
                 .productCardSale {
-                    font-size: 7px;
+                    font-size: 9px;
                     padding: 2.5px 10px;
                 }
 
@@ -285,7 +310,7 @@
         }
 
         .productCardName {
-            font-size: 14px;
+            font-size: 9px;
         }
 
         .productCardprices {
@@ -314,13 +339,10 @@
 @media screen and (min-width:280px) and (max-width:319px) and (max-height:1000px) {
     .productCard {
         width: 110px;
-        height:auto;
         padding: 7px;
 
         .productCardInfo {
             width: 90px;
-            height: auto;
-
             .productCardImgAndSale {
                 .productCardSale {
                     font-size: 7px;

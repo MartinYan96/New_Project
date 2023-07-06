@@ -7,8 +7,11 @@ const NewProduct = () => {
     return (
         <div className='latestProductsBlok'>
             <h2 className='titleSection '>{textsEng.sectionsTexts[1].name}</h2>
-            <div className='newProductSlider'>
-                <NewProductSlider />
+            <div className='newProductBlock'>
+                <div className='newProductSlider'>
+                    <NewProductSlider />
+                </div>
+
             </div>
         </div>
     )

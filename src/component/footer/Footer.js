@@ -1,6 +1,6 @@
 import './footer.scss'
 import './footer.media.scss'
-import logo from '../../resources/img/31studioLogo.jpg'
+import logo from '../../resources/img/31studioLogoFooter.jpg'
 import { FaFacebookF } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';

@@ -8,7 +8,9 @@ const PopularBrends = () => {
     return (
         <section className='popularBrends'>
             <h2 className='titleSection '>{textsEng.sectionsTexts[3].name}</h2>
-            <PopularBrendsSlider />
+            <div className='popularBrendsSliderBlock'>
+                <PopularBrendsSlider />
+            </div>
         </section>
     );
 

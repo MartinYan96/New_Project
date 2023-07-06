@@ -4,10 +4,20 @@ import { useState } from 'react';
 import { textsEng } from '../../resources/textAndLanguage/textAndLanguage';
 import { FiChevronDown } from 'react-icons/fi'
 import { useMediaQuery } from 'react-responsive'
+import LanguageButtons from '../toggleAndButtonsLanguges/LanguageButtons';
 import Search from '../search/Search';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { openAndCloseBurger } from '../redux/closeAndOpenBugerMenu';
+import BurgerMenu from '../burgerMenu/BurgerMenu';
 
 const NavMenu = () => {
-    const { navMenuSections } = textsEng
+    const dispatch = useDispatch()
+    const openAndCloseNavMenuByBurgerMenu = useSelector(state => state.burger.burgerOpen)
+    const language = useSelector(state => state.language.language)
+
+    const { navMenuSections } = language
+
     const tabletSize = useMediaQuery({ maxWidth: 1024 });
 
     const [activeSubMenu, setActiveSubMenu] = useState(null);
@@ -19,11 +29,17 @@ const NavMenu = () => {
     const handleMouseLeave = () => {
         setActiveSubMenu(null);
     };
+    const style = {
+        backgroundColor: 'black'
+    }
+
+    const navMenuClassName = openAndCloseNavMenuByBurgerMenu ? 'navMenu' : 'navMenu active'
 
     return (
-        <nav className='navMenu'>
+        <nav className={navMenuClassName} >
             <ul className='navSictionsMenu'>
                 {tabletSize ? <Search /> : ''}
+                {tabletSize ? <LanguageButtons /> : ''}
                 {navMenuSections.map((item, index) => {
                     return (
                         <li
@@ -39,7 +55,9 @@ const NavMenu = () => {
                                     className={activeSubMenu === index ? 'navMenuSectionsCategorys active' : 'navMenuSectionsCategorys'}
                                 >
                                     {item.subMenu.map((subItem, subIndex) => (
-                                        <li className='categories' key={subIndex}>
+                                        <li className='categories' key={subIndex} onTouchStart={() => {
+                                            dispatch(openAndCloseBurger())
+                                        }}>
                                             {subItem}
                                         </li>
                                     ))}
@@ -51,6 +69,11 @@ const NavMenu = () => {
                 )
                 }
             </ul>
+            <div className='heroHeader' onTouchStart={() => {
+                dispatch(openAndCloseBurger())
+            }}>
+
+            </div>
             {!tabletSize ? <Search /> : ''}
         </nav>
 

@@ -8,20 +8,25 @@ import PopularGoods from '../popularGoods/PopularGoods'
 import Sales from '../sales/Sales'
 import PopularBrends from '../popularBrends/PopularBrends'
 import Footer from '../footer/Footer'
+import { Provider } from 'react-redux';
+import { store } from '../redux/reducers'
+
 
 
 const App = () => {
     return (
-        <div className='app'>
-            <Header />
-            <NavMenu />
-            <NewsAndSaleSlider />
-            <Sales/>
-            <NewProduct/>
-            <PopularGoods/>
-            <PopularBrends/>
-            <Footer/>
-        </div>
+        <Provider store={store }>
+            <div className='app'>
+                <Header />
+                <NavMenu />
+                <NewsAndSaleSlider />
+                <Sales />
+                <NewProduct />
+                <PopularGoods />
+                <PopularBrends />
+                <Footer />
+            </div>
+        </Provider>
     )
 }
 

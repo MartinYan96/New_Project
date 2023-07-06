@@ -1,19 +1,20 @@
 .imagesBlok {
-    height: 1080px;
+    height: 1330px;
     margin-bottom: 50px;
     background-color: white;
 
     .saleProductInfos {
-
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 70px;
+        padding-bottom: 200px;
         height: 100%;
         width: 100%;
 
         .imgAndSelectToPage {
             display: flex;
+            width: 100%;
             height: 100%;
 
             .saleProductInfo {
@@ -22,7 +23,8 @@
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: space-between;
-                padding: 50px;
+                padding-right: 50px;
+                padding-left: 0;
                 padding-top: 0;
                 text-align: start;
 
@@ -38,19 +40,19 @@
 
                     .saleTitle {
                         color: black;
-                        font-size: 55px;
+                        font-size: 50px;
                     }
 
                     .saleDiscription {
                         color: black;
-                        font-size: 16px;
+                        font-size: 18px;
                         margin: 50px 0;
                     }
                 }
 
                 .slideNumber {
                     color: black;
-                    font-size: 55px;
+                    font-size: 50px;
                 }
             }
 
@@ -59,15 +61,22 @@
                 height: 100%;
                 display: flex;
                 align-items: center;
+                justify-content: center;
 
                 div {
-                    aspect-ratio: 1/1;
 
-                    img {
-                        width: 100%;
-                        height: 100%;
+                    div {
+                        aspect-ratio: 1/1;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+
                     }
                 }
+
 
             }
         }

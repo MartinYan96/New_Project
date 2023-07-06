@@ -1,7 +1,27 @@
-@media screen and (min-width: 1024px) and (max-width:1279px) {
+@media screen and (min-width: 1280px) and (max-width:1599px) {
     .languages {
         .language {
-            font-size: 14px;
+            font-size: 11px;
+        }
+    }
+
+}
+@media screen and (min-width: 1025px) and (max-width:1279px) {
+    .languages {
+        .language {
+            font-size: 11px;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .languages {
+        border-bottom: 1px solid grey;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .language {
+            font-size: 11px;
         }
     }
 

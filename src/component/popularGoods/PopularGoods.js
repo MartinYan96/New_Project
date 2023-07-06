@@ -29,12 +29,14 @@ const PopularGoods = () => {
                     )
                 })}
             </ul>
-            <div className='popularGoodsList'>
-                {textsEng.navMenuSections.map((section, index) => {
-                    return (
-                        <ProductCard key={index} img={img} />
-                    )
-                })}
+            <div className='popularGoodsBlock'>
+                <div className='popularGoodsList'>
+                    {textsEng.navMenuSections.map((section, index) => {
+                        return (
+                            <ProductCard key={index} img={img} />
+                        )
+                    })}
+                </div>
             </div>
         </section >
     )

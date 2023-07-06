@@ -3,12 +3,14 @@
     width: 200px;
     justify-content: center;
     align-items: center;
+    justify-content:flex-start;
 
     .language {
+        font-weight: 700;
         margin: 0 5px;
         cursor: pointer;
         transition: .3s;
-        font-size: 20px;
+        font-size: 16px;
     }
     .language:hover{
         color: grey;

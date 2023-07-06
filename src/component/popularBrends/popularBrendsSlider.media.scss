@@ -1,3 +1,27 @@
+@media screen and (min-width: 1280px) and (max-width:1599px) {
+    .sliderSection {
+        .poularBrendsSlider {
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        div {
+                            .popularBrendsImages {
+                                width: 140px;
+                                height: 77px;
+
+                                img {
+                                    width: 140px;
+                                    height: 77px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) and (max-width:1279px) {
     .sliderSection {
         .poularBrendsSlider {
@@ -7,11 +31,11 @@
                         div {
                             .popularBrendsImages {
                                 width: 140px;
-                                height: 100px;
+                                height: 77px;
 
                                 img {
                                     width: 140px;
-                                    height: 100px;
+                                    height: 77px;
                                 }
                             }
                         }

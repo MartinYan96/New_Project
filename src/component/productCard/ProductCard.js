@@ -13,7 +13,9 @@ const ProductCard = ({ img }) => {
                     <p className='productCardSale'>26%</p>
                     <p className='productCardNewProduct'>{textsEng.productCard.new}</p>
                     <p className='productCardPreorder'>{textsEng.productCard.preOrder}</p>
-                    <img className='productCardImg' src={img} alt='' />
+                    <div className='productCardImgFrame'>
+                        <img className='productCardImg' src={img} alt='' />
+                    </div>
                 </div>
                 <p className='productCardName'> Chanel N5</p>
                 <div className='productCardprices'>

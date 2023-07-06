@@ -24,8 +24,12 @@ const NewsAndSale = ({ data, index }) => {
                         <p className='slideNumber'>0{slideNumber}</p>
                     </div>
                     <div className='img'>
+
                         <div>
-                            <img src={data} alt="" />
+
+                            <div>
+                                <img src={data} alt="" />
+                            </div>
 
                         </div>
                     </div>

@@ -5,12 +5,15 @@
     justify-content: center;
     background: white;
     padding:  50px;
-    .salesList{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 20px;
+    .salesBlock{
+        padding:0 100px ;
+        .salesList{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
     }
     .showAllSalesButton{
         margin-top: 50px;

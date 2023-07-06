@@ -1,56 +1,85 @@
-@media screen and (min-width: 1280px) and (max-width:1599px) {
+@media screen and (min-width: 1025px) and (max-width:1919px) {
     .navMenu {
+        .navSictionsMenu {
+            .navMenuSections {
+                margin-right: 13px;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1280px) and (max-width:1599px),
+(min-width: 1025px) and (max-width:1279px) {
+    .navMenu {
+        padding: 0 25px;
+
         .navSictionsMenu {
             height: 70px;
 
             .navMenuSections {
-                font-size: 12px;
+                font-size: 11px;
 
                 .navMenuSectionsCategorys {
-                    font-size: 0;
-
                     .categories {
-                        font-size: 0px;
+                        font-size: 0;
 
                     }
                 }
 
                 .navMenuSectionsCategorys.active {
-                    border: 1px solid black;
-                    height: auto;
-                    padding: 20px 35px;
-                    cursor: default;
+                    padding: 10px 25px;
 
                     .categories {
-                        font-size: 11px;
+                        font-size: 10px;
 
                     }
                 }
             }
         }
+
     }
 }
-@media screen and (min-width:279px) and (max-width:1279px) {
-    .navMenu{
-        display: none;
-    } 
+
+@media screen and (min-width: 1025px) and (max-width:1279px) {
+    .navMenu {
+        .navSictionsMenu {
+            .navMenuSections {
+                font-size: 9px;
+
+                .navMenuSectionsCategorys.active {
+
+                    .categories {
+                        font-size: 8px;
+
+                    }
+                }
+            }
+        }
+
+    }
 }
-@media screen and (min-width: 1024px) and (max-width:1279px) {
+
+@media screen and (max-width: 1024px) {
     .navMenu {
         position: absolute;
         width: 100%;
-        background: #00000059;
+        background: #00000000;
         padding: 0;
         align-items: flex-start;
-        height: 100%;
-        top: 200px;
+        height: calc(100% - 150px);
+        display: flex;
+        top: 150px;
         left: 0;
+        transition: .5s;
 
 
         .navSictionsMenu {
-            padding: 50px;
+            padding: 30px;
+            width: 100%;
             background: white;
             height: auto;
+            width: auto;
             flex-direction: column;
             gap: 30px;
             height: 100%;
@@ -61,10 +90,9 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                // height: 20px;
+                font-size: 11px;
                 margin-right: 0px;
                 font-weight: 500;
-                font-size: 20px;
                 position: relative;
                 cursor: pointer;
                 transition: all 0.5s ease;
@@ -88,12 +116,15 @@
                     height: 0;
                     padding: 0;
                     overflow: hidden;
+                    white-space: nowrap;
                     cursor: default;
 
                     .categories {
+                        white-space: nowrap;
                         display: flex;
                         justify-content: center;
                         cursor: pointer;
+                        font-size: 10px;
                         margin: 3px 0;
                         color: black;
                     }
@@ -109,7 +140,7 @@
                     font-size: 17px;
                     border: 1px solid grey;
                     height: auto;
-                    padding: 20px 35px;
+                    padding: 10px 25px;
                     cursor: default;
                     width: 100%;
 
@@ -126,9 +157,43 @@
 
         }
 
-        .search {
-            margin-right: 50px;
-            cursor: pointer;
+        .heroHeader {
+            height: 100%;
+            display: block;
+            background: #00000059;
         }
+    }
+
+    .navMenu.active {
+        left: -200%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px),
+screen and (max-width:499px) and (max-height:1000px) {
+    .navMenu {
+        height: calc(100% - 100px);
+        top: 100px;
+
+        .navSictionsMenu {
+            gap: 10px;
+
+            .navMenuSections {
+                font-size: 9px;
+
+                .navMenuSectionsCategorys {
+
+                    .categories {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:499px) and (max-height:1000px){
+    .navMenu {
+        height: calc(100% - 90px);
+        top: 90px;
     }
 }

@@ -21,12 +21,15 @@ const Sales = () => {
     return (
         <section className='sales'>
             <h2 className='titleSection'>{textsEng.sectionsTexts[0].name}</h2>
-            <div className='salesList'>
-                {data.img.map((img, index) => {
-                    return (
-                        <ProductCard key={index} img={img} />
-                    )
-                })}
+            <div className='salesBlock'>
+                <div className='salesList'>
+                    {data.img.map((img, index) => {
+                        return (
+                            <ProductCard key={index} img={img} />
+                        )
+                    })}
+                </div>
+
             </div>
             <div className='showAllSalesButton'>
                 <button className='button'>{textsEng.sectionsTexts[0].button}</button>

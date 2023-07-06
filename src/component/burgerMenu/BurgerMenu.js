@@ -1,18 +1,19 @@
-import { useState } from 'react';
+import {useState } from 'react';
 import './burgerMenu.scss'
 import './burgerMenu.media.scss'
+import { useDispatch, useSelector} from 'react-redux';
+import { openAndCloseBurger } from '../redux/closeAndOpenBugerMenu';
 
 const BurgerMenu = () => {
-    const [activeBurgerMenu, setActiveBurgerMenu] = useState(false);
-    const burgerMenuClick = () => {
-        !activeBurgerMenu ? setActiveBurgerMenu(true) : setActiveBurgerMenu(false);
-    }
-
+    const openAndCloseNavMenuByBurgerMenu = useSelector(state => state.burger.burgerOpen)
+    const dispatch = useDispatch()
+    
     return (
         <section className='burgerMenuSection'>
             <div
-                className={!activeBurgerMenu ? 'burgerMenu' : 'burgerMenu active'}
-                onClick={() => burgerMenuClick()}
+                className={!openAndCloseNavMenuByBurgerMenu ? 'burgerMenu' : 'burgerMenu active'}
+                onClick={() => { dispatch(openAndCloseBurger())  
+                }}
             >
                 <div className='burgerLiner1'></div>
                 <div className='burgerLiner2'></div>
