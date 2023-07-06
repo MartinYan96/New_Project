@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/New_Project/static/css/main.b718da6f.css",
-    "main.js": "/New_Project/static/js/main.59e084ae.js",
+    "main.css": "/New_Project/static/css/main.51611d19.css",
+    "main.js": "/New_Project/static/js/main.732eaa4c.js",
     "static/js/787.c0a346e0.chunk.js": "/New_Project/static/js/787.c0a346e0.chunk.js",
     "static/media/2.jpg": "/New_Project/static/media/2.51c3fca59c17dacc0916.jpg",
     "static/media/3.jpg": "/New_Project/static/media/3.85568cd81d60798b9720.jpg",
@@ -12,8 +12,9 @@
     "static/media/woomen2.jpeg": "/New_Project/static/media/woomen2.73dbd121abb9c1f00e2b.jpeg",
     "static/media/woomen1.jpeg": "/New_Project/static/media/woomen1.4f4a5392f2b97bec38ad.jpeg",
     "static/media/woomen3.jpeg": "/New_Project/static/media/woomen3.e0c2b7674f059c123384.jpeg",
-    "static/media/31studioLogo.jpg": "/New_Project/static/media/31studioLogo.5626739e6ad4fbe5fb68.jpg",
+    "static/media/31studioLogoFooter.jpg": "/New_Project/static/media/31studioLogoFooter.5626739e6ad4fbe5fb68.jpg",
     "static/media/popularBrends4.png": "/New_Project/static/media/popularBrends4.697d78c3166379e427d5.png",
+    "static/media/31studioLogo.jpg": "/New_Project/static/media/31studioLogo.2401fd2d5005d628df8f.jpg",
     "static/media/popularBrends1.png": "/New_Project/static/media/popularBrends1.4993d325e6b02283521c.png",
     "static/media/roboto-latin-900italic.woff": "/New_Project/static/media/roboto-latin-900italic.c20d916c1a1b094c1cec.woff",
     "static/media/roboto-latin-300italic.woff": "/New_Project/static/media/roboto-latin-300italic.bd5b7a13f2c52b531a2a.woff",
@@ -45,12 +46,12 @@
     "static/media/slick.ttf": "/New_Project/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/New_Project/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/New_Project/index.html",
-    "main.b718da6f.css.map": "/New_Project/static/css/main.b718da6f.css.map",
-    "main.59e084ae.js.map": "/New_Project/static/js/main.59e084ae.js.map",
+    "main.51611d19.css.map": "/New_Project/static/css/main.51611d19.css.map",
+    "main.732eaa4c.js.map": "/New_Project/static/js/main.732eaa4c.js.map",
     "787.c0a346e0.chunk.js.map": "/New_Project/static/js/787.c0a346e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b718da6f.css",
-    "static/js/main.59e084ae.js"
+    "static/css/main.51611d19.css",
+    "static/js/main.732eaa4c.js"
   ]
 }
