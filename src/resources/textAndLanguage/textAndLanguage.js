@@ -130,7 +130,6 @@ export const textsArm = {
     productCard:{
         new:'Նոր',
         preOrder:'Նախնական պատվեր',
-        currencySign:'֏',
     }
 
 }
@@ -270,7 +269,6 @@ export const textsEng = {
     productCard:{
         new:'New',
         preOrder:'Pre-order',
-        currencySign:'$',
     }
 
 }
@@ -406,7 +404,6 @@ export const textsRus = {
     productCard:{
         new:'Новинка',
         preOrder:'Предзаказ',
-        currencySign:'₽',
     }
 
 }

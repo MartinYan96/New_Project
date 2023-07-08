@@ -10,6 +10,7 @@ import PopularBrends from '../popularBrends/PopularBrends'
 import Footer from '../footer/Footer'
 import { Provider } from 'react-redux';
 import { store } from '../redux/reducers'
+// import ToAdvertis31Stutio from '../toAdvertis31Stutio/ToAdvertis31Stutio'
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
                 <Header />
                 <NavMenu />
                 <NewsAndSaleSlider />
+                {/* <ToAdvertis31Stutio/> */}
                 <Sales />
                 <NewProduct />
                 <PopularGoods />

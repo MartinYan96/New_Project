@@ -1,7 +1,6 @@
 import './navMenu.scss'
 import './navMenu.media.scss'
 import { useState } from 'react';
-import { textsEng } from '../../resources/textAndLanguage/textAndLanguage';
 import { FiChevronDown } from 'react-icons/fi'
 import { useMediaQuery } from 'react-responsive'
 import LanguageButtons from '../toggleAndButtonsLanguges/LanguageButtons';
@@ -9,7 +8,6 @@ import Search from '../search/Search';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { openAndCloseBurger } from '../redux/closeAndOpenBugerMenu';
-import BurgerMenu from '../burgerMenu/BurgerMenu';
 
 const NavMenu = () => {
     const dispatch = useDispatch()
@@ -29,9 +27,6 @@ const NavMenu = () => {
     const handleMouseLeave = () => {
         setActiveSubMenu(null);
     };
-    const style = {
-        backgroundColor: 'black'
-    }
 
     const navMenuClassName = openAndCloseNavMenuByBurgerMenu ? 'navMenu' : 'navMenu active'
 

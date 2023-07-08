@@ -10,9 +10,12 @@ import woomenSlide2 from '../../resources/img/woomen2.jpeg'
 import woomenSlide3 from '../../resources/img/woomen3.jpeg'
 import woomenSlide4 from '../../resources/img/woomen4.jpeg'
 import woomenSlide5 from '../../resources/img/woomen5.jpeg'
-import { textsEng } from '../../resources/textAndLanguage/textAndLanguage'
+import { useSelector } from 'react-redux'
 
 const Sales = () => {
+    const language = useSelector(state => state.language.language)
+    const {sectionsTexts} = language
+
 
     const data = {
         img: [slide1, slide2, slide3, slide4, woomenSlide1, woomenSlide2, woomenSlide3, woomenSlide4, woomenSlide5,],
@@ -20,7 +23,7 @@ const Sales = () => {
 
     return (
         <section className='sales'>
-            <h2 className='titleSection'>{textsEng.sectionsTexts[0].name}</h2>
+            <h2 className='titleSection'>{sectionsTexts[0].name}</h2>
             <div className='salesBlock'>
                 <div className='salesList'>
                     {data.img.map((img, index) => {
@@ -32,7 +35,7 @@ const Sales = () => {
 
             </div>
             <div className='showAllSalesButton'>
-                <button className='button'>{textsEng.sectionsTexts[0].button}</button>
+                <button className='button'>{sectionsTexts[0].button}</button>
             </div>
         </section>
     )

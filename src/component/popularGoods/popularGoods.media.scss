@@ -12,11 +12,14 @@
 @media screen and (min-width: 1024px) and (max-width:1279px) {
     .popularGoods {
         padding: 25px;
-        .popularGoodsSections{
+
+        .popularGoodsSections {
             height: 40px;
-            .popularGoodsSection{
+
+            .popularGoodsSection {
                 font-size: 11px;
             }
+
             .popularGoodsSectionActive {
                 font-size: 12px;
             }
@@ -31,6 +34,7 @@
 @media screen and (min-width: 1280px) and (max-width:1599px) {
     .popularGoods {
         padding: 25px;
+
         .popularGoodsSections {
             height: 40px;
 
@@ -58,6 +62,7 @@
 @media screen and (min-width: 720px) and (max-width:1023px) {
     .popularGoods {
         padding: 20px;
+
         .popularGoodsSections {
             height: 40px;
 
@@ -74,7 +79,8 @@
             }
 
         }
-        .popularGoodsBlock{
+
+        .popularGoodsBlock {
             .popularGoodsList {
                 gap: 10px;
             }
@@ -87,6 +93,7 @@
 
     .popularGoods {
         padding: 20px;
+
         .popularGoodsSections {
             height: 40px;
             padding-bottom: 20px;
@@ -119,9 +126,9 @@
         padding: 20px;
 
         .popularGoodsSections {
-            height: 40px;
-            padding-bottom: 20px;
-            margin: 30px 0;
+            height: auto;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
 
             .popularGoodsSection {
                 margin-right: 6px;
@@ -135,8 +142,11 @@
 
         }
 
-        .popularGoodsList {
-            gap: 10px;
+        .popularGoodsBlock {
+            .popularGoodsList {
+                gap: 10px;
+            }
+
         }
     }
 }

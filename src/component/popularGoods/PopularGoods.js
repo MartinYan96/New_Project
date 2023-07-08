@@ -1,12 +1,17 @@
 import './popularGoods.scss'
 import './popularGoods.media.scss'
-import { textsEng } from '../../resources/textAndLanguage/textAndLanguage'
 import { useState } from 'react';
 import ProductCard from '../productCard/ProductCard';
 import img from '../../resources/img/2.jpg'
+import { useSelector } from 'react-redux';
 
 const PopularGoods = () => {
-    const popularGoodsSections = textsEng.navMenuSections.slice(0, 6)
+
+    const language = useSelector(state => state.language.language)
+    const { navMenuSections, sectionsTexts } = language
+
+
+    const popularGoodsSections = navMenuSections.slice(0, 6)
 
     const [popularGoodsSectionActive, setPopularGoodsSectionActive] = useState(0);
 
@@ -16,7 +21,7 @@ const PopularGoods = () => {
 
     return (
         <section className='popularGoods'>
-            <h2 className='titleSection'>{textsEng.sectionsTexts[2].name}</h2>
+            <h2 className='titleSection'>{sectionsTexts[2].name}</h2>
             <ul className='popularGoodsSections' >
                 {popularGoodsSections.map((section, index) => {
                     return (
@@ -31,7 +36,7 @@ const PopularGoods = () => {
             </ul>
             <div className='popularGoodsBlock'>
                 <div className='popularGoodsList'>
-                    {textsEng.navMenuSections.map((section, index) => {
+                    {navMenuSections.map((section, index) => {
                         return (
                             <ProductCard key={index} img={img} />
                         )

@@ -89,7 +89,10 @@
                 bottom: 0px;
 
                 li {
-                    margin: 0 2.5px;
+                    margin: 0 2px;
+                    button:before{
+                        font-size: 7px;
+                    }
                 }
             }
         }

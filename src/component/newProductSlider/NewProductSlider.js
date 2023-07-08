@@ -23,8 +23,8 @@ const NewProductSlider = () => {
     const dekstopAndTabletLandscapeResize = useMediaQuery({ maxWidth: 1279 });
     const tabletSize = useMediaQuery({ maxWidth: 719 });
     const veryBigPhoneSize = useMediaQuery({ maxWidth: 499 });
-    const bigPhoneSize = useMediaQuery({ maxWidth: 460 });
-    const smolePhoneSize = useMediaQuery({ maxWidth: 319 });
+    const bigPhoneSize = useMediaQuery({ maxWidth: 464 });
+    // const smolePhoneSize = useMediaQuery({ maxWidth: 319 });
 
 
 

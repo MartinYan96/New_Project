@@ -6,11 +6,14 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import { textsEng } from '../../resources/textAndLanguage/textAndLanguage'
+import { useSelector } from 'react-redux';
 
 
 
 const Footer = () => {
+    const language = useSelector(state => state.language.language)
+    const { footer } = language
+ 
     return (
         <footer className='footer'>
             <section className='footerSection'>
@@ -19,9 +22,9 @@ const Footer = () => {
                         <img src={logo} alt="" />
                     </li>
                     {
-                        textsEng.footer.categories.slice(0, 3).map((categories, index) => {
+                        footer.categories.slice(0, 3).map((categories, index) => {
                             return (
-                                <li key={index}  className='footerCategories'>{categories.categories}</li>
+                                <li key={index} className='footerCategories'>{categories.categories}</li>
                             )
                         })
                     }
@@ -29,7 +32,7 @@ const Footer = () => {
                 </ul>
                 <ul className='footerSections'>
                     {
-                        textsEng.footer.categories.slice(3, 6).map((categories, index) => {
+                        footer.categories.slice(3, 6).map((categories, index) => {
                             return (
                                 <li key={index} className='footerCategories'>{categories.categories}</li>
                             )
@@ -37,7 +40,7 @@ const Footer = () => {
                     }
                 </ul>
                 <div className='footerContactsSections'>
-                    <h3>{textsEng.footer.footerContactsSections[0].footerContacts}</h3>
+                    <h3>{footer.footerContactsSections[0].footerContacts}</h3>
                     <div className='socLinks'>
                         <FaFacebookF className='footerIcons' />
                         <FaInstagram className='footerIcons' />
@@ -45,12 +48,12 @@ const Footer = () => {
                     <ul className='footerSections'>
                         <li className='footerCategories'><FaPhoneAlt className='footerIcons' />+37412345678</li>
                         <li className='footerCategories'><GrMail className='footerIcons' /> 31studio@gmail.com</li>
-                        <li className='footerCategories'><FaMapMarkerAlt className='footerIcons' /> {textsEng.footer.footerContactsSections[1].address}</li>
+                        <li className='footerCategories'><FaMapMarkerAlt className='footerIcons' /> {footer.footerContactsSections[1].address}</li>
                     </ul>
                 </div>
             </section>
             <div className='allRightsReserved'>
-                <span>{textsEng.footer.footerContactsSections[2].text}</span>
+                <span>{footer.footerContactsSections[2].text}</span>
             </div>
         </footer>
     )

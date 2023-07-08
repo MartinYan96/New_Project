@@ -1,7 +1,6 @@
 import './languageButtons.scss'
 import './languageButtons.media.scss'
 import { arm, rus, eng } from '../redux/selectAndToggleLanguage'
-import { textsEng, textsArm, textsRus } from '../../resources/textAndLanguage/textAndLanguage'
 import { useDispatch } from 'react-redux'
 
 

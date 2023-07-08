@@ -1,4 +1,3 @@
-import {useState } from 'react';
 import './burgerMenu.scss'
 import './burgerMenu.media.scss'
 import { useDispatch, useSelector} from 'react-redux';
