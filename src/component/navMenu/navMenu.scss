@@ -15,6 +15,7 @@
         height: 80px;
 
         .navMenuSections {
+
             display: flex;
             align-items: center;
             margin-right: 16px;
@@ -23,51 +24,57 @@
             cursor: pointer;
             transition: all 0.5s ease;
 
-            .downIcon {
-                margin-left: 5px;
-            }
+            a {
+                text-decoration: none;
+                color: black;
 
-            .downIcon.active {
-                transform: rotate(180deg);
-            }
-
-            .navMenuSectionsCategorys {
-                display: flex;
-                background: white;
-                position: absolute;
-                flex-direction: column;
-                text-align: left;
-                width: max-content;
-                top: 47px;
-                transition: all 0.5s ease;
-                font-size: 0;
-                border: 0;
-                height: 0;
-                padding: 0;
-                overflow: hidden;
-                cursor: default;
-
-                .categories {
-                    cursor: pointer;
-                    margin: 3px 0;
-                    color: black;
+                .downIcon {
+                    margin-left: 5px;
                 }
 
-                .categories:hover {
+                .downIcon.active {
+                    transform: rotate(180deg);
+                }
+
+                .navMenuSectionsCategorys {
+                    display: flex;
+                    background: white;
+                    position: absolute;
+                    flex-direction: column;
+                    text-align: left;
+                    width: max-content;
+                    top: 47px;
                     transition: all 0.5s ease;
-                    color: grey;
-                    transform: scale(1.05);
+                    font-size: 0;
+                    border: 0;
+                    height: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    cursor: default;
+
+                    .categories {
+                        cursor: pointer;
+                        margin: 3px 0;
+                        color: black;
+                    }
+
+                    .categories:hover {
+                        transition: all 0.5s ease;
+                        color: grey;
+                        transform: scale(1.05);
+                    }
+                }
+
+                .navMenuSectionsCategorys.active {
+                    font-size: 15px;
+                    border: 1px solid black;
+                    height: auto;
+                    padding: 20px 35px;
+                    cursor: default;
+
                 }
             }
 
-            .navMenuSectionsCategorys.active {
-                font-size: 15px;
-                border: 1px solid black;
-                height: auto;
-                padding: 20px 35px;
-                cursor: default;
-
-            }
         }
 
         .navMenuSections:hover {
@@ -79,7 +86,8 @@
         }
 
     }
-    .heroHeader{
+
+    .heroHeader {
         width: 100%;
         display: none;
     }

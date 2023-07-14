@@ -5,6 +5,7 @@ import LanguageButtons from '../toggleAndButtonsLanguges/LanguageButtons'
 import { useMediaQuery } from 'react-responsive'
 import BurgerMenu from '../burgerMenu/BurgerMenu'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,7 +17,7 @@ const Header = () => {
     return (
         <header className="header">
             {tabletSize ? <BurgerMenu /> : <LanguageButtons />}
-            <img className='logo' src={logo} alt="" />
+            <Link to={'/'} >  <img className='logo' src={logo} alt="" /></Link>
             <div className='RegisterloginButtons'>
                 <p className='register'>{language.registerAndlogin[0].register}</p>/
                 <p className='login'>{language.registerAndlogin[1].login}</p>

@@ -1,5 +1,6 @@
 import './navMenu.scss'
 import './navMenu.media.scss'
+import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi'
 import { useMediaQuery } from 'react-responsive'
@@ -28,6 +29,7 @@ const NavMenu = () => {
         setActiveSubMenu(null);
     };
 
+
     const navMenuClassName = openAndCloseNavMenuByBurgerMenu ? 'navMenu' : 'navMenu active'
 
     return (
@@ -36,6 +38,7 @@ const NavMenu = () => {
                 {tabletSize ? <Search /> : ''}
                 {tabletSize ? <LanguageButtons /> : ''}
                 {navMenuSections.map((item, index) => {
+                    console.log(item.link)
                     return (
                         <li
                             className='navMenuSections'
@@ -43,21 +46,23 @@ const NavMenu = () => {
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={handleMouseLeave}
                         >
-                            {item.title}
-                            {item.subMenu.length > 0 && <FiChevronDown className={activeSubMenu === index ? 'downIcon active' : 'downIcon'} />}
-                            {item.subMenu.length > 0 &&
-                                <ul
-                                    className={activeSubMenu === index ? 'navMenuSectionsCategorys active' : 'navMenuSectionsCategorys'}
-                                >
-                                    {item.subMenu.map((subItem, subIndex) => (
-                                        <li className='categories' key={subIndex} onTouchStart={() => {
-                                            dispatch(openAndCloseBurger())
-                                        }}>
-                                            {subItem}
-                                        </li>
-                                    ))}
-                                </ul>
-                            }
+                            <Link to={item.link}>
+                                {item.title}
+                                {item.subMenu.length > 0 && <FiChevronDown className={activeSubMenu === index ? 'downIcon active' : 'downIcon'} />}
+                                {item.subMenu.length > 0 &&
+                                    <ul
+                                        className={activeSubMenu === index ? 'navMenuSectionsCategorys active' : 'navMenuSectionsCategorys'}
+                                    >
+                                        {item.subMenu.map((subItem, subIndex) => (
+                                            <li className='categories' key={subIndex} onTouchStart={() => {
+                                                dispatch(openAndCloseBurger())
+                                            }}>
+                                                {subItem}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                }
+                            </Link>
                         </li>
                     )
                 }

@@ -1,36 +1,37 @@
 import './newsAndSale.scss'
 import './newsAndSale.media.scss'
 
-const NewsAndSale = ({ data, index }) => {
-    const slideNumber = index + 1
+const NewsAndSale = ({ data}) => {
+    const {img, name, news, price, salePrice, sale } = data
+
     return (
-        <div className="imagesBlok" >
-            <div className="saleProductInfos" >
-                <div className='imgAndSelectToPage'>
-                    <div className='saleProductInfo'>
-                        <div className='salePercent'>Скидки</div>
-                        <div className='selectToPage'>
-                            <h4 className='saleTitle'>
-                                Бьюти-неделя!
-                                <br />
-                                .Скидки до 50%</h4>
-                            <h5 className='saleDiscription'>
-                                Успейте купить любимые
-                                <br />
-                                средства по супер-выгодной цене!
-                            </h5>
-                            <button className='button'>Перейти</button>
+        <div className="newsAndSaleProducts" >
+            <div className="newsAndSaleProductsInfo" >
+                <div className='imgAndInfo'>
+                    <div className='productInfo'>
+                        <div className='productNewAndSaleMarker'>
+                            {sale ? <div className='productSalePercent'>Скидка {sale} %</div> : ''}
+                            {news ? <div className='newProduct'>Новинка</div> : ''}
+
                         </div>
-                        <p className='slideNumber'>0{slideNumber}</p>
+                        <p className='productName'>{name}</p>
+                        <div className='selectToPage'>
+                            <p className='productPrice'>{price} ֏</p>
+                            {salePrice ?
+                                <div className='productSalePrice'>
+                                    <div className='deleteSalePriceLinear'></div>
+                                    {salePrice}֏
+                                </div> :
+                                ''
+                            }
+                        </div>
+                        <button className='button'>Перейти</button>
                     </div>
                     <div className='img'>
-
                         <div>
-
                             <div>
-                                <img src={data} alt="" />
+                                <img src={img} alt="" />
                             </div>
-
                         </div>
                     </div>
                 </div>

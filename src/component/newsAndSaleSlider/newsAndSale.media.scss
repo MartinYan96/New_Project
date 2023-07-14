@@ -1,44 +1,50 @@
 @media screen and (min-width: 1600px) and (max-width:1919px) {
-    .imagesBlok {
+    .newsAndSaleProducts {
         height: 1091px;
 
-        .saleProductInfos {
+        .newsAndSaleProductsInfo {
             padding-bottom: 150px;
         }
     }
 }
 
 @media screen and (min-width: 1280px) and (max-width:1599px) {
-    .imagesBlok {
+    .newsAndSaleProducts {
         height: 848px;
 
-        .saleProductInfos {
+        .newsAndSaleProductsInfo {
             padding: 60px;
             padding-bottom: 100px;
 
 
-            .imgAndSelectToPage {
-                .saleProductInfo {
+            .imgAndInfo {
+                .productInfo {
                     padding-right: 25px;
 
-                    .salePercent {
-                        font-size: 11px;
-                        padding: 10px 25px;
+                    .productNewAndSaleMarker {
+                        .productSalePercent {
+                            font-size: 11px;
+                            padding: 10px 25px;
+                        }
+
+                        .newProduct {
+                            font-size: 11px;
+                            padding: 10px 25px;
+                        }
+
+                    }
+
+                    .productName {
+                        font-size: 45px;
                     }
 
                     .selectToPage {
-                        .saleTitle {
-                            font-size: 45px;
-                        }
 
-                        .saleDiscription {
-                            font-size: 13px;
+                        .productPrice {
+                            font-size: 50px;
                         }
                     }
 
-                    .slideNumber {
-                        font-size: 45px;
-                    }
                 }
             }
 
@@ -49,35 +55,42 @@
 
 
 @media screen and (min-width: 1024px) and (max-width:1279px) {
-    .imagesBlok {
+    .newsAndSaleProducts {
         height: 700px;
 
-        .saleProductInfos {
+        .newsAndSaleProductsInfo {
             padding: 50px;
             padding-bottom: 100px;
 
-            .imgAndSelectToPage {
-                .saleProductInfo {
+            .imgAndInfo {
+                .productInfo {
                     padding-right: 25px;
 
-                    .salePercent {
-                        font-size: 9px;
-                        padding: 7px 20px;
+                    .productNewAndSaleMarker {
+
+                        .productSalePercent {
+                            font-size: 9px;
+                            padding: 7px 20px;
+                        }
+
+                        .newProduct {
+                            font-size: 9px;
+                            padding: 7px 20px;
+                        }
+
+                    }
+
+                    .productName {
+                        font-size: 35px;
                     }
 
                     .selectToPage {
-                        .saleTitle {
-                            font-size: 35px;
-                        }
 
-                        .saleDiscription {
+                        .productPrice {
                             font-size: 11px;
                         }
                     }
 
-                    .slideNumber {
-                        font-size: 35px;
-                    }
                 }
             }
 
@@ -86,35 +99,42 @@
 }
 
 @media screen and (min-width: 720px) and (max-width:1023px) {
-    .imagesBlok {
+    .newsAndSaleProducts {
         height: 520px;
 
-        .saleProductInfos {
+        .newsAndSaleProductsInfo {
             padding: 35px;
             padding-bottom: 100px;
 
-            .imgAndSelectToPage {
-                .saleProductInfo {
+            .imgAndInfo {
+                .productInfo {
                     padding: 0 25px 25px 0;
 
-                    .salePercent {
-                        padding: 7px 20px;
-                        font-size: 11px;
+                    .productNewAndSaleMarker {
+
+                        .productSalePercent {
+                            font-size: 11px;
+                            padding: 7px 20px;
+                        }
+
+                        .newProduct {
+                            font-size: 11px;
+                            padding: 7px 20px;
+                        }
+
+                    }
+
+                    .productName {
+                        font-size: 25px;
                     }
 
                     .selectToPage {
-                        .saleTitle {
-                            font-size: 25px;
-                        }
 
-                        .saleDiscription {
+                        .productPrice {
                             font-size: 13px;
                         }
                     }
 
-                    .slideNumber {
-                        font-size: 25px;
-                    }
                 }
 
             }
@@ -125,37 +145,41 @@
 }
 
 @media screen and (min-width: 500px) and (max-width:719px) and (max-height:1000px) {
-    .imagesBlok {
+    .newsAndSaleProducts {
         height: 358px;
 
-        .saleProductInfos {
+        .newsAndSaleProductsInfo {
             padding: 30px;
             padding-bottom: 70px;
 
-            .imgAndSelectToPage {
-                .saleProductInfo {
+            .imgAndInfo {
+                .productInfo {
                     padding-right: 10px;
 
+                    .productNewAndSaleMarker {
+                        .productSalePercent {
+                            font-size: 11px;
+                            padding: 7px 20px;
+                        }
 
-                    .salePercent {
-                        padding: 7px 20px;
-                        font-size: 11px;
+                        .newProduct {
+                            font-size: 11px;
+                            padding: 7px 20px;
+                        }
+
+                    }
+
+                    .productName {
+                        font-size: 19px;
                     }
 
                     .selectToPage {
 
-                        .saleTitle {
-                            font-size: 19px;
-                        }
 
-                        .saleDiscription {
+                        .productPrice {
                             font-size: 9px;
                             margin: 20px 0;
                         }
-                    }
-
-                    .slideNumber {
-                        font-size: 15px;
                     }
                 }
             }
@@ -167,38 +191,43 @@
 
 @media screen and (max-width:499px) and (max-height:1000px),
 screen and (max-width:450px) and (max-height:1000px) {
-    .imagesBlok {
+    .newsAndSaleProducts {
         height: 270px;
 
-        .saleProductInfos {
+        .newsAndSaleProductsInfo {
             padding: 10px 30px;
 
-            .imgAndSelectToPage {
-                .saleProductInfo {
+            .imgAndInfo {
+                .productInfo {
                     width: 50%;
                     padding: 0;
                     height: 220px;
 
-                    .salePercent {
-                        padding: 7px 20px;
-                        font-size: 9px;
+                    .productNewAndSaleMarker {
+                        .productSalePercent {
+                            font-size: 9px;
+                            padding: 7px 20px;
+                        }
+
+                        .newProduct {
+                            font-size: 9px;
+                            padding: 7px 20px;
+                        }
+
+                    }
+
+                    .productName {
+                        font-size: 20px;
                     }
 
                     .selectToPage {
                         padding-right: 1px;
 
-                        .saleTitle {
-                            font-size: 20px;
-                        }
 
-                        .saleDiscription {
+                        .productPrice {
                             font-size: 9px;
                             margin: 20px 0;
                         }
-                    }
-
-                    .slideNumber {
-                        font-size: 15px;
                     }
                 }
 
@@ -224,37 +253,45 @@ screen and (max-width:450px) and (max-height:1000px) {
 
 
 @media screen and (max-width:450px) and (max-height:1000px) {
-    .imagesBlok {
+    .newsAndSaleProducts {
 
         height: 200px;
-        .saleProductInfos {
+
+        .newsAndSaleProductsInfo {
 
 
-            .imgAndSelectToPage {
-                .saleProductInfo {
+            .imgAndInfo {
+                .productInfo {
                     height: 130px;
 
-                    .salePercent {
-                        padding: 7px 20px;
-                        font-size: 9px;
+                    .productNewAndSaleMarker {
+
+                        .productSalePercent {
+                            padding: 7px 20px;
+                            font-size: 9px;
+                        }
+
+                        .newProduct {
+                            font-size: 9px;
+                            padding: 7px 20px;
+                        }
+
+                    }
+
+                    .productName {
+                        font-size: 14px;
                     }
 
                     .selectToPage {
                         padding-right: 1px;
 
-                        .saleTitle {
-                            font-size: 14px;
-                        }
 
-                        .saleDiscription {
+                        .productPrice {
                             font-size: 7px;
                             margin: 15px 0;
                         }
                     }
 
-                    .slideNumber {
-                        font-size: 14px;
-                    }
                 }
 
                 .img {
@@ -277,37 +314,44 @@ screen and (max-width:450px) and (max-height:1000px) {
 }
 
 @media screen and (min-width:280px) and (max-width:319px) and (max-height:1000px) {
-    .imagesBlok {
+    .newsAndSaleProducts {
         height: 250px;
 
-        .saleProductInfos {
+        .newsAndSaleProductsInfo {
             padding: 35px;
 
-            .imgAndSelectToPage {
-                .saleProductInfo {
+            .imgAndInfo {
+                .productInfo {
                     padding: 0;
 
-                    .salePercent {
-                        padding: 7px 20px;
+                    .productNewAndSaleMarker {
+
+                        .productSalePercent {
+                            font-size: 9px;
+                            padding: 7px 20px;
+                        }
+
+                        .newProduct {
+                            font-size: 9px;
+                            padding: 7px 20px;
+                        }
+
+                    }
+
+                    .productName {
                         font-size: 9px;
                     }
 
                     .selectToPage {
                         padding-right: 1px;
 
-                        .saleTitle {
-                            font-size: 9px;
-                        }
 
-                        .saleDiscription {
+                        .productPrice {
                             font-size: 7px;
                             margin: 15px 0;
                         }
                     }
 
-                    .slideNumber {
-                        font-size: 15px;
-                    }
                 }
             }
         }

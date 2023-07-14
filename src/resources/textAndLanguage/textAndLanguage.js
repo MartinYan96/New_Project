@@ -158,6 +158,7 @@ export const textsEng = {
     navMenuSections: [
         {
             title: 'HAIR',
+            link:`/hair`,
             subMenu: [
                 'Styling',
                 'Hair coloring ',
@@ -167,6 +168,7 @@ export const textsEng = {
         },
         {
             title: 'FACE & BODY',
+            link:`/FACE & BODY`,
             subMenu: [
                 'Face care',
                 'Body care',
@@ -176,6 +178,7 @@ export const textsEng = {
         },
         {
             title: 'MANICURE',
+            link:`/MANICURE`,
             subMenu: [
                 'Nail polish',
                 'Gel polish',
@@ -187,6 +190,7 @@ export const textsEng = {
         },
         {
             title: 'ELECTRIC',
+            link:`/ELECTRIC`,
             subMenu: [
                 'Hairdryers',
                 'Hair clippers & trimmers',
@@ -197,6 +201,7 @@ export const textsEng = {
         },
         {
             title: 'ACCESSORIES',
+            link:`/ACCESSORIES`,
             subMenu: [
                 'Comb',
                 'Hair brush',
@@ -206,6 +211,7 @@ export const textsEng = {
         },
         {
             title: 'FURNITURE & EQUIPMENT',
+            link:`/FURNITURE & EQUIPMENT`,
             subMenu: [
                 'Washing unit',
                 'Styling chairs',
@@ -216,10 +222,12 @@ export const textsEng = {
         },
         {
             title: 'BARBER PRODUCTS',
+            link:`/BARBER PRODUCTS`,
             subMenu: []
         },
         {
             title: 'SALE!',
+            link:`/SALE`,
             subMenu: []
         }
     ],

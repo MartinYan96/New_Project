@@ -20,20 +20,23 @@
             .navMenuSections {
                 font-size: 11px;
 
-                .navMenuSectionsCategorys {
-                    .categories {
-                        font-size: 0;
+                a {
+                    .navMenuSectionsCategorys {
+                        .categories {
+                            font-size: 0;
 
+                        }
                     }
-                }
 
-                .navMenuSectionsCategorys.active {
-                    padding: 10px 25px;
+                    .navMenuSectionsCategorys.active {
+                        padding: 10px 25px;
 
-                    .categories {
-                        font-size: 10px;
+                        .categories {
+                            font-size: 10px;
 
+                        }
                     }
+
                 }
             }
         }
@@ -47,11 +50,13 @@
             .navMenuSections {
                 font-size: 9px;
 
-                .navMenuSectionsCategorys.active {
+                a {
+                    .navMenuSectionsCategorys.active {
 
-                    .categories {
-                        font-size: 8px;
+                        .categories {
+                            font-size: 8px;
 
+                        }
                     }
                 }
             }
@@ -97,52 +102,55 @@
                 cursor: pointer;
                 transition: all 0.5s ease;
 
-                .downIcon {
-                    margin-left: 0;
-                }
+                a {
+                    .downIcon {
+                        margin-left: 0;
+                    }
 
-                .navMenuSectionsCategorys {
-                    display: flex;
-                    background: rgb(246, 246, 246);
-                    position: static;
-                    flex-direction: column;
-                    text-align: left;
-                    width: max-content;
-                    top: 47px;
-                    transition: all 0.5s ease;
-                    font-size: 0;
-                    border: 0;
-                    width: 100%;
-                    height: 0;
-                    padding: 0;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    cursor: default;
-
-                    .categories {
-                        white-space: nowrap;
+                    .navMenuSectionsCategorys {
                         display: flex;
-                        justify-content: center;
-                        cursor: pointer;
-                        font-size: 10px;
-                        margin: 3px 0;
-                        color: black;
-                    }
-
-                    .categories:hover {
+                        background: rgb(246, 246, 246);
+                        position: static;
+                        flex-direction: column;
+                        text-align: left;
+                        width: max-content;
+                        top: 47px;
                         transition: all 0.5s ease;
-                        color: grey;
-                        transform: scale(1.05);
-                    }
-                }
+                        font-size: 0;
+                        border: 0;
+                        width: 100%;
+                        height: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        cursor: default;
 
-                .navMenuSectionsCategorys.active {
-                    font-size: 17px;
-                    border: 1px solid grey;
-                    height: auto;
-                    padding: 10px 25px;
-                    cursor: default;
-                    width: 100%;
+                        .categories {
+                            white-space: nowrap;
+                            display: flex;
+                            justify-content: center;
+                            cursor: pointer;
+                            font-size: 10px;
+                            margin: 3px 0;
+                            color: black;
+                        }
+
+                        .categories:hover {
+                            transition: all 0.5s ease;
+                            color: grey;
+                            transform: scale(1.05);
+                        }
+                    }
+
+                    .navMenuSectionsCategorys.active {
+                        font-size: 17px;
+                        border: 1px solid grey;
+                        height: auto;
+                        padding: 10px 25px;
+                        cursor: default;
+                        width: 100%;
+
+                    }
 
                 }
             }
@@ -181,17 +189,22 @@ screen and (max-width:499px) and (max-height:1000px) {
             .navMenuSections {
                 font-size: 9px;
 
-                .navMenuSectionsCategorys {
+                a {
+                    .navMenuSectionsCategorys {
 
-                    .categories {
-                        font-size: 8px;
+                        .categories {
+                            font-size: 8px;
+                        }
                     }
+
                 }
+
             }
         }
     }
 }
-@media screen and (max-width:499px) and (max-height:1000px){
+
+@media screen and (max-width:499px) and (max-height:1000px) {
     .navMenu {
         height: calc(100% - 90px);
         top: 90px;

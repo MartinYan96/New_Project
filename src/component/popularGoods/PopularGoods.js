@@ -2,8 +2,9 @@ import './popularGoods.scss'
 import './popularGoods.media.scss'
 import { useState } from 'react';
 import ProductCard from '../productCard/ProductCard';
-import img from '../../resources/img/2.jpg'
+import img from '../../resources/img/tush.webp'
 import { useSelector } from 'react-redux';
+import { data } from '../../resources/products/products';
 
 const PopularGoods = () => {
 
@@ -36,9 +37,9 @@ const PopularGoods = () => {
             </ul>
             <div className='popularGoodsBlock'>
                 <div className='popularGoodsList'>
-                    {navMenuSections.map((section, index) => {
+                    {data.products.map(product => {
                         return (
-                            <ProductCard key={index} img={img} />
+                            <ProductCard key={product.id} data={product} />
                         )
                     })}
                 </div>
