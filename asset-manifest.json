@@ -1,17 +1,12 @@
 {
   "files": {
-    "main.css": "/New_Project/static/css/main.537c2112.css",
-    "main.js": "/New_Project/static/js/main.ad35797f.js",
+    "main.css": "/New_Project/static/css/main.f07a709c.css",
+    "main.js": "/New_Project/static/js/main.dfcd2dcf.js",
     "static/js/787.c0a346e0.chunk.js": "/New_Project/static/js/787.c0a346e0.chunk.js",
-    "static/media/2.jpg": "/New_Project/static/media/2.51c3fca59c17dacc0916.jpg",
-    "static/media/3.jpg": "/New_Project/static/media/3.85568cd81d60798b9720.jpg",
-    "static/media/1.jpg": "/New_Project/static/media/1.54a048096eb7bba4522b.jpg",
-    "static/media/4.jpg": "/New_Project/static/media/4.692daaa78d56acfa7782.jpg",
-    "static/media/woomen5.jpeg": "/New_Project/static/media/woomen5.04e38b5875b72bb044e1.jpeg",
-    "static/media/woomen4.jpeg": "/New_Project/static/media/woomen4.5536562683cf3459fdd6.jpeg",
-    "static/media/woomen2.jpeg": "/New_Project/static/media/woomen2.73dbd121abb9c1f00e2b.jpeg",
-    "static/media/woomen1.jpeg": "/New_Project/static/media/woomen1.4f4a5392f2b97bec38ad.jpeg",
-    "static/media/woomen3.jpeg": "/New_Project/static/media/woomen3.e0c2b7674f059c123384.jpeg",
+    "static/media/3.jpg": "/New_Project/static/media/3.721431c50b6adae4dc93.jpg",
+    "static/media/2.jpg": "/New_Project/static/media/2.b9d35f19bb5a4e102a28.jpg",
+    "static/media/4.jpg": "/New_Project/static/media/4.d31aece6a835a965bdaa.jpg",
+    "static/media/1.jpg": "/New_Project/static/media/1.01c8f1094a2e615d17cf.jpg",
     "static/media/31studioLogoFooter.jpg": "/New_Project/static/media/31studioLogoFooter.5626739e6ad4fbe5fb68.jpg",
     "static/media/popularBrends4.png": "/New_Project/static/media/popularBrends4.697d78c3166379e427d5.png",
     "static/media/31studioLogo.jpg": "/New_Project/static/media/31studioLogo.2401fd2d5005d628df8f.jpg",
@@ -41,17 +36,18 @@
     "static/media/roboto-latin-400.woff2": "/New_Project/static/media/roboto-latin-400.176f8f5bd5f02b3abfcf.woff2",
     "static/media/roboto-latin-900.woff2": "/New_Project/static/media/roboto-latin-900.870c8c1486f76054301a.woff2",
     "static/media/popularBrends2.png": "/New_Project/static/media/popularBrends2.ba0480350e0725a11e80.png",
+    "static/media/tush.webp": "/New_Project/static/media/tush.0e61018c48cd72e99f62.webp",
     "static/media/slick.svg": "/New_Project/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/New_Project/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/New_Project/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/New_Project/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/New_Project/index.html",
-    "main.537c2112.css.map": "/New_Project/static/css/main.537c2112.css.map",
-    "main.ad35797f.js.map": "/New_Project/static/js/main.ad35797f.js.map",
+    "main.f07a709c.css.map": "/New_Project/static/css/main.f07a709c.css.map",
+    "main.dfcd2dcf.js.map": "/New_Project/static/js/main.dfcd2dcf.js.map",
     "787.c0a346e0.chunk.js.map": "/New_Project/static/js/787.c0a346e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.537c2112.css",
-    "static/js/main.ad35797f.js"
+    "static/css/main.f07a709c.css",
+    "static/js/main.dfcd2dcf.js"
   ]
 }
