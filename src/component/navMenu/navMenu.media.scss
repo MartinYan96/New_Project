@@ -67,22 +67,25 @@
 
 @media screen and (max-width: 1024px) {
     .navMenu {
-        position: absolute;
-        width: 100%;
-        background: #00000000;
+        position: fixed;
+        width: auto;
+        background-color: #ebebeb;
         padding: 0;
         align-items: flex-start;
-        height: calc(100% - 150px);
+        height:100%;
         display: flex;
-        top: 150px;
+        top: 0;
         left: 0;
+        border-top:0 ;
         transition: .5s;
+        .burgerNone{
+            width: 200px;
+        }
 
 
         .navSictionsMenu {
             padding: 30px;
             width: 100%;
-            background: white;
             height: auto;
             width: auto;
             flex-direction: column;
@@ -103,8 +106,10 @@
                 transition: all 0.5s ease;
 
                 a {
+                    text-align: center;
                     .downIcon {
                         margin-left: 0;
+
                     }
 
                     .navMenuSectionsCategorys {

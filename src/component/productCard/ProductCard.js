@@ -1,16 +1,16 @@
 import './productCard.scss'
 import './productCard.media.scss'
 import { useSelector } from 'react-redux'
-
+import { Link } from 'react-router-dom'
+// import classNames from 'classnames'
 
 const ProductCard = ({ data }) => {
     const language = useSelector(state => state.language.language)
     const { productCard } = language
-    console.log(data)
-    const { img, name, news, price, sale, salePrice, } = data
+    const { img, name, news, price, sale, salePrice,id} = data
 
     return (
-        < div className='productCard' >
+        <Link to={`/New_Project/productItem/:${id}`} className='productCard'>
             <div className='productCardInfo'>
                 <div className='productCardImgAndSale'>
                     {sale ? <p className='productCardSale'>{sale}%</p> : ''}
@@ -29,7 +29,7 @@ const ProductCard = ({ data }) => {
                     </div> : ''}
                 </div>
             </div>
-        </div >
+        </Link>
     )
 
 }

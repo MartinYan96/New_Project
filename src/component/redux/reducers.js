@@ -1,10 +1,14 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import closeAndOpenBugerMenu from './closeAndOpenBugerMenu'
 import selectAndToggleLanguages from './selectAndToggleLanguage'
+import closeAndOpenFiltersBar from './closeAndOpenFiltersBar'
+import closeAndOpenSearchWindow from './closeAndOpenSearchWindow'
 
 const rootReducer = combineReducers({
     burger: closeAndOpenBugerMenu,
-    language: selectAndToggleLanguages
+    language: selectAndToggleLanguages,
+    filters: closeAndOpenFiltersBar,
+    search: closeAndOpenSearchWindow
 })
 
 export const store = configureStore({

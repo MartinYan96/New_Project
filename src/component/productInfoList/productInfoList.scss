@@ -1,0 +1,24 @@
+.productInfoList{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    gap: 50px;
+    .productImg{
+        aspect-ratio: 1/1;
+        width: 40%;
+        img{
+            width: 100%;
+        }
+    }
+    .productCharacteristicsInfo{
+        width: 60%;
+        .productName{
+            margin-bottom: 30px;
+        }
+        .productCharacteristics{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

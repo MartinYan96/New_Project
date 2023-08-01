@@ -1,6 +1,6 @@
 import './footer.scss'
 import './footer.media.scss'
-import logo from '../../resources/img/31studioLogoFooter.jpg'
+import logo from '../../resources/img/LOGO.png'
 import { FaFacebookF } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';
@@ -47,7 +47,7 @@ const Footer = () => {
                     </div>
                     <ul className='footerSections'>
                         <li className='footerCategories'><FaPhoneAlt className='footerIcons' />+37412345678</li>
-                        <li className='footerCategories'><GrMail className='footerIcons' /> 31studio@gmail.com</li>
+                        <li className='footerCategories'><GrMail className='footerIcons' /> mikro@gmail.com</li>
                         <li className='footerCategories'><FaMapMarkerAlt className='footerIcons' /> {footer.footerContactsSections[1].address}</li>
                     </ul>
                 </div>

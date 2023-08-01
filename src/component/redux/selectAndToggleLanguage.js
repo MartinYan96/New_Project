@@ -1,26 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { textsEng, textsArm, textsRus } from '../../resources/textAndLanguage/textAndLanguage'
+import data from '../../resources/data/data';
+
 
 const selectAndToggleLanguages = createSlice({
     name: 'selectAndToggleLanguages',
     initialState: {
-        language: textsArm
+        language:data().data.languages.arm
     },
 
     reducers: {
         arm(state) {
-           state.language = textsArm
+            state.language = data().data.languages.arm
         },
         rus(state) {
-        state.language = textsRus
+            state.language = data().data.languages.rus
         },
-        eng(state) {
-           state.language = textsEng
-        }
-
     }
 })
 
 
 export default selectAndToggleLanguages.reducer
-export const { arm, rus, eng } = selectAndToggleLanguages.actions
+export const { arm, rus } = selectAndToggleLanguages.actions

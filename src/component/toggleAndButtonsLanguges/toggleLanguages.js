@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { textsEng, textsArm, textsRus } from '../../resources/textAndLanguage/textAndLanguage'
+import {textsArm, textsRus } from '../../resources/textAndLanguage/textAndLanguage'
 
 
 const ToggleLanguages = () => {
@@ -11,11 +11,8 @@ const ToggleLanguages = () => {
     const toggleLanguagesRus = () => {
         setToggleLanguage(textsRus)
     }
-    const toggleLanguagesEng = () => {
-        setToggleLanguage(textsEng)
-    }
 
-    return { toggleLanguagesRus, toggleLanguagesArm, toggleLanguagesEng, toggleLanguage }
+    return { toggleLanguagesRus, toggleLanguagesArm, toggleLanguage }
 }
 
 export default ToggleLanguages

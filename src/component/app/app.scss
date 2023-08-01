@@ -10,35 +10,28 @@
     user-select: none;
 }
 
-.app {
+.app{
+    width: 100%;
+}
+
+.project {
     width: 1910px;
+    overflow: hidden;
     margin: auto;
-
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
+    position: relative;
 }
 
 .button {
     max-width: 200px;
-    background: black;
     box-sizing: border-box;
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(61, 61, 61, 1) 35%, rgba(107, 107, 107, 1) 100%);
     color: white;
     background-size: 100%;
     display: flex;
+    text-align: center;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
     padding: 16px 40px;
     border: none;
 

@@ -1,68 +1,67 @@
 import './productsSection.scss'
 import './productsSection.media.scss'
-import { useState } from 'react';
-import { data } from '../../resources/products/products'
-import ProductCard from '../productCard/ProductCard';
-
-const ProductsSection = () => {
-    const prices = data.products.map((product) => product.price);
-    const minPrice = Math.min(...prices);
-    const maxPrice = Math.max(...prices);
-    const [price, setPrice] = useState(maxPrice);
-    const [onSale, setOnSale] = useState(false);
+import { useEffect, useState } from 'react';
+import SortProduct from './SortProducts';
+import data from '../../resources/data/data';
+import FilteredPriceProductList from './FilteredPriceProductList';
+import ProductFilters from './ProductFilters'
+import { useSelector } from 'react-redux';
 
 
-    const handleMinPriceChange = (event) => {
-        setPrice(event.target.value);
-    };
 
+const ProductsSection = ({ categorie,setPage }) => {
 
-    const FilteredProductList = () => data.products.map(product => {
-        if ((onSale && product.sale && product.price <= price) || (!onSale && product.price <= price)) {
+    const { products } = data().data
+    const [onSaleInput, setOnSaleInput] = useState(false);
+    const [onNewInput, setonNewInput] = useState(false);
+    const [minPriceProducts, setMinPriceProducts] = useState();
+    const [maxPriceProducts, setMaxPriceProducts] = useState();
+    const openAndCloseFiltersBar = useSelector(state => state.filters.filterBarActive)
+    const productsThisPage = products.filter(product => {
+        if (categorie.categorie === 'ԶԵՂՉ' || categorie.categorie === 'РАСПРОДАЖА') {
+            return product.sale !== ''
+        }
+        else if (categorie.categorie === 'ՆՈՐ' || categorie.categorie === 'НОВЫЕ') {
+            return product.news
+        }
+        else {
             return (
-                <ProductCard key={product.id} data={product} />
+                product.categorie.arm === categorie.categorie ||
+                product.categorie.rus === categorie.categorie
             )
         }
     })
 
+
+    useEffect(() => {
+        categorie.categorie === 'ԶԵՂՉ' || categorie.categorie === 'РАСПРОДАЖА' ? setOnSaleInput(true) : setOnSaleInput(false)
+        categorie.categorie === 'ՆՈՐ' || categorie.categorie === 'НОВЫЕ' ? setonNewInput(true) : setonNewInput(false)
+    }, [categorie])
+
+
+    const [product, setProduct] = useState(productsThisPage);
+    const [filteredProducts, setFilteredProducts] = useState(productsThisPage)
+
+
+
+    const recommended = [...filteredProducts]
+
     return (
-        <section className='productSection'>
-            <div className='productFilters'>
-                <div className='productPriceFilter'>
-                    <h3 className='productFiltersTitle'>PRICE</h3>
-                    <input type="range" min={minPrice} value={price} max={maxPrice} onChange={handleMinPriceChange} />
-                    <div className='tooltipPrice'>
-                        <p className='tooltipPriceMin'>
-                            {price}
-                        </p>
-                        <p className='tooltipPriceMax'>
-
-                            {maxPrice}
-                        </p>
+        <>
+            <ProductFilters setFilteredProducts={setFilteredProducts} filteredProducts={filteredProducts} categorie={categorie} productsThisPage={productsThisPage} product={product} setProduct={setProduct} onSaleInput={onSaleInput} onNewInput={onNewInput} setMinPriceProducts={setMinPriceProducts} setMaxPriceProducts={setMaxPriceProducts} />
+            <section className={openAndCloseFiltersBar ? 'productSection active' : 'productSection'}>
+                <div className='productList'>
+                    <SortProduct filteredProducts={filteredProducts} setFilteredProducts={setFilteredProducts} />
+                    <div className='products'>
+                        <FilteredPriceProductList recommended={recommended} minPriceToggle={minPriceProducts} maxPriceToggle={maxPriceProducts} />
                     </div>
+                    <button className='button'>TRY IT</button>
                 </div>
-                <div>
-                    <h3 className='productFiltersTitle'>ON SALE</h3>
-                    <input type="checkbox" checked={onSale} onChange={() => !onSale ? setOnSale(true) : setOnSale(false)} />
-                </div>
-                <div>
-                    <h3 className='productFiltersTitle'>INVENTORY</h3>
-                    <input type="checkbox" />
-                </div>
-                <div>
-                    <h3 className='productFiltersTitle'>CATEGORY</h3>
-                    <input type="checkbox" />
-                </div>
-            </div>
-            <div className='productList'>
-                <div className='products'>
-                    <FilteredProductList />
-                </div>
-                <button className='button'>TRY IT</button>
-            </div>
-
-        </section>
+            </section>
+        </>
     )
 }
 
 export default ProductsSection
+
+

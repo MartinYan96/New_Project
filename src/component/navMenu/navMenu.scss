@@ -3,10 +3,11 @@
     top: 0px;
     display: flex;
     padding: 0 50px;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: #ebebeb;
     z-index: 100;
     white-space: nowrap;
 
@@ -27,6 +28,7 @@
             a {
                 text-decoration: none;
                 color: black;
+                text-align: start;
 
                 .downIcon {
                     margin-left: 5px;
@@ -41,7 +43,6 @@
                     background: white;
                     position: absolute;
                     flex-direction: column;
-                    text-align: left;
                     width: max-content;
                     top: 47px;
                     transition: all 0.5s ease;

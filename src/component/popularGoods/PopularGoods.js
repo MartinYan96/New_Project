@@ -2,17 +2,15 @@ import './popularGoods.scss'
 import './popularGoods.media.scss'
 import { useState } from 'react';
 import ProductCard from '../productCard/ProductCard';
-import img from '../../resources/img/tush.webp'
 import { useSelector } from 'react-redux';
-import { data } from '../../resources/products/products';
+import data from '../../resources/data/data';
 
 const PopularGoods = () => {
-
+    const salesProducts = data().data.products.filter(saleProduct => saleProduct.sale !== '')
     const language = useSelector(state => state.language.language)
-    const { navMenuSections, sectionsTexts } = language
+    const { menu, sectionsTexts } = language
 
-
-    const popularGoodsSections = navMenuSections.slice(0, 6)
+    const popularGoodsSections = menu.slice(3, 8)
 
     const [popularGoodsSectionActive, setPopularGoodsSectionActive] = useState(0);
 
@@ -30,14 +28,14 @@ const PopularGoods = () => {
                             key={index}
                             onClick={() => handleMouseEnter(index)}
                         >
-                            {section.title}
+                            {section.categorie}
                         </li>
                     )
                 })}
             </ul>
             <div className='popularGoodsBlock'>
                 <div className='popularGoodsList'>
-                    {data.products.map(product => {
+                    {salesProducts.map(product => {
                         return (
                             <ProductCard key={product.id} data={product} />
                         )

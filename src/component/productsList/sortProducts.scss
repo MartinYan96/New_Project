@@ -1,0 +1,36 @@
+.sortProduct {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+
+    .sortButton {
+        font-size: 11px;
+        padding: 10px 25px;
+        border: 1px solid grey;
+        cursor: pointer;
+        display: flex;
+
+        .sortIcon {
+            display: flex;
+            align-items: center;
+            padding-left: 5px;
+            font-size: 14px;
+        }
+
+        #sortIcon0,
+        #sortIcon1 {
+            display: none;
+        }
+    }
+
+    .sortButton.active {
+        font-size: 11px;
+        padding: 10px 25px;
+        border: 1px solid grey;
+        background: gray;
+        cursor: pointer;
+        color: white;
+        display: flex;
+    }
+}

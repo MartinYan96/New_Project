@@ -5,9 +5,8 @@ import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import { Provider } from 'react-redux';
 import { store } from '../redux/reducers'
-import ProductsSection from '../productsList/ProductsSection'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import HomePage from '../homePage/HomePage'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Pages from '../pages/PagesEnter'
 
 
 
@@ -17,12 +16,10 @@ const App = () => {
             <Provider store={store}>
                 <div className='app'>
                     <Header />
-                    <NavMenu />     
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/hair" element={<ProductsSection />} />
-                        <Route path="/FACE & BODY" element={<ProductsSection />} />
-                    </Routes>
+                    <NavMenu />
+                    <div className='project'>
+                        <Pages />
+                    </div>
                     <Footer />
                 </div>
             </Provider>
