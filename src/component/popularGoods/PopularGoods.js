@@ -20,7 +20,7 @@ const PopularGoods = () => {
 
     return (
         <section className='popularGoods'>
-            <h2 className='titleSection'>{sectionsTexts[2].name}</h2>
+            <h2 className='titleSection'>{sectionsTexts[3].name}</h2>
             <ul className='popularGoodsSections' >
                 {popularGoodsSections.map((section, index) => {
                     return (

@@ -13,6 +13,7 @@ const Search = () => {
     const dispatch = useDispatch()
     const openSearchWindow = useSelector(state => state.search.searchWindowOpen)
     const [serachProducts, setSerachProducts] = useState('')
+    const language = useSelector(state => state.language.language.search)
 
     const foundProducts = products.filter(product => {
         return product.name.toLowerCase().includes(serachProducts.toLowerCase())
@@ -26,7 +27,7 @@ const Search = () => {
     return (
         <div className={!openSearchWindow ? 'search' : 'search active'}>
             <form action="" >
-                <input placeholder='Search'
+                <input placeholder={language.search}
                     type='text'
                     onChange={handleInputChange}
                     className={!openSearchWindow ? 'searchInput' : 'searchInput active'}
@@ -39,11 +40,11 @@ const Search = () => {
                     <div className='searchResult'>
                         <div>
                             <p>{serachProducts === '' ? 0 : foundProducts.length}</p>
-                            <p>Pезультатов</p>
+                            <p>{language.results}</p>
                         </div>
                         <GrClose className='searchWindowCloaseIcon' onClick={() => dispatch(closeSearch())} />
                     </div>
-                    <p className='searchProducts'>Продукты</p>
+                    <p className='searchProducts'>{language.products}</p>
                 </div>
                 <div className='foundProducts'>
                     {serachProducts === '' ? '' : foundProducts.map(product => <ProductCard key={product.id} data={product} />)}

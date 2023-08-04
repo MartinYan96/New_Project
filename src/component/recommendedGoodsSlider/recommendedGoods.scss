@@ -1,0 +1,14 @@
+.recommendedGoods {
+    padding: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    .recommendedGoodsBlok {
+        padding: 0 100px;
+
+        .recommendedGoodsSlider {
+            display: block;
+        }
+    }
+}

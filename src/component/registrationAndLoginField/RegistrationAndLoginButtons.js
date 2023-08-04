@@ -8,7 +8,7 @@ import RegistrationForm from './RegistrationForm'
 import RegistrationAndLoginField from './RegistrationAndLoginField'
 
 const RegistrationAndLoginButtons = () => {
-    const language = useSelector(state => state.language.language)
+    const language = useSelector(state => state.language.language.registerAndlogin)
     const location = useLocation();
     const [searchParams] = useSearchParams();
     const modalType = searchParams.get('modal');
@@ -26,7 +26,6 @@ const RegistrationAndLoginButtons = () => {
     const linkOnRegistrationOnLoginPage = (modalPage) => {
         return modalPage
     }
-
 
     const registration = modalType === 'registration' ?
         <RegistrationAndLoginField>
@@ -47,8 +46,8 @@ const RegistrationAndLoginButtons = () => {
 
     return (
         <div className='RegisterloginButtons'>
-            <Link to={linkOnRegistrationOnLoginPage(`${location.pathname}?modal=registration`)} className='register'  >{language.registerAndlogin[0].register}</Link>/
-            <Link to={linkOnRegistrationOnLoginPage(`${location.pathname}?modal=login`)}>{language.registerAndlogin[1].login}</Link>
+            <Link to={linkOnRegistrationOnLoginPage(`${location.pathname}?modal=registration`)} className='register'  >{language.register.register}</Link>/
+            <Link to={linkOnRegistrationOnLoginPage(`${location.pathname}?modal=login`)} className='login' >{language.login.login}</Link>
             {registration}
             {login}
         </div>

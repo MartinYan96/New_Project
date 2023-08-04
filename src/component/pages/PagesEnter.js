@@ -20,7 +20,7 @@ const Pages = () => {
                 {pages.map(pages => {
                     return <Route key={pages} path={`/New_Project${pages.url}`} element={<ProductsSection categorie={pages} />} />
                 })}
-                <Route path={`/New_Project/productItem/:id`} element={<ProductInfoList/>} />
+                <Route path={`/New_Project/productItem/:id`} element={<ProductInfoList />} />
             </Routes>
         </Suspense>
 

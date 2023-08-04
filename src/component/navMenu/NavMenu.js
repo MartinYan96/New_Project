@@ -16,6 +16,7 @@ const NavMenu = () => {
     const openAndCloseNavMenuByBurgerMenu = useSelector(state => state.burger.burgerOpen)
     const openSearchWindow = useSelector(state => state.search.searchWindowOpen)
     const language = useSelector(state => state.language.language)
+  
 
     const { menu } = language
 

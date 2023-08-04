@@ -1,15 +1,18 @@
-import NewProduct from "../newProductSlider/NewProduct"
-import NewsAndSaleSlider from "../newsAndSaleSlider/NewsAndSaleSlider"
+import RecommendedGoodsSlider from "../recommendedGoodsSlider/RecommendedGoods"
 // import PopularBrends from "../popularBrends/PopularBrends"
+import NewGoods from "../newGoods/NewGoods"
 import PopularGoods from "../popularGoods/PopularGoods"
-import Sales from "../sales/Sales"
+import SalesGoods from "../salesGoods/SalesGoods"
+// import Sales from "../sales/Sales"
+import ShopAdvertisementSlider from "../shopAdvertisementSlider/ShopAdvertisementSlider"
 
 const HomePage = () => {
     return (
         <>
-            <NewsAndSaleSlider />
-            <Sales />
-            <NewProduct />
+            <ShopAdvertisementSlider />
+            <SalesGoods />
+            <RecommendedGoodsSlider/>
+            <NewGoods />
             <PopularGoods />
             {/* <PopularBrends /> */}
         </>

@@ -19,13 +19,17 @@ import img18 from '../../resources/img/products/xotHndzich.webp'
 import img19 from '../../resources/img/products/motoblok.webp'
 import img20 from '../../resources/img/products/prpur.webp'
 import img21 from '../../resources/img/products/generator.webp'
-
+import shopAdvertisementSliderImage1 from '../img/shopAdvertisementSlider/1.webp'
+import shopAdvertisementSliderImage2 from '../img/shopAdvertisementSlider/2.webp'
+import shopAdvertisementSliderImage3 from '../img/shopAdvertisementSlider/3.webp'
+import shopAdvertisementSliderImage4 from '../img/shopAdvertisementSlider/4.webp'
 
 
 const data = () => {
     const data = {
         languages: {
             rus: {
+                languages: '/рус/',
                 menu: [
                     {
                         categorie: 'ГЛАВНАЯ',
@@ -39,7 +43,7 @@ const data = () => {
                     },
                     {
                         categorie: 'РАСПРОДАЖА',
-                        url: '/рус/распродажа /',
+                        url: '/рус/распродажа/',
                         submenu: []
                     },
                     {
@@ -157,6 +161,9 @@ const data = () => {
                         name: 'Новый ассортимент'
                     },
                     {
+                        name: 'Рекомендуем'
+                    },
+                    {
                         name: 'Популярные товары'
                     },
                     {
@@ -164,15 +171,68 @@ const data = () => {
                     }
                 ],
 
-                registerAndlogin: [
-                    {
-                        register: 'Регистрация'
+                registerAndlogin: {
+                    register: {
+                        register: 'Регистрация',
+                        email: 'Эл. почта',
+                        password: 'Пароль',
+                        name: 'Имя',
+                        lastName: 'Фамилия',
+                        phone: 'Номер телефона',
+                        privacyPolicy: 'Соглашаетесь с политикой конфиденциальности?',
+                        validation: {
+                            email: {
+                                error: 'Неправильный эл. адрес',
+                                required: 'Поле Эл. почта обязательно для заполнения'
+                            },
+                            phoneNumber: {
+                                matches: 'Номер телефона должен начинаться с + и содержать только цифры',
+                                required: 'Поле Номер телефона обязательно для заполнения',
+                            },
+                            password: {
+                                required: 'Поле Пароль обязательно для заполнения',
+                                min: 'Пароль должен содержать минимум 6 символов',
+                                max: 'Пароль должен содержать максимум 12 символов',
+                            },
+                            name: {
+                                required: 'Поле Имя обязательно для заполнения',
+                                min: 'Имя должен содержать максимум 4 символов',
+                                max: 'Имя должен содержать максимум 12 символов',
+                            },
+                            lastName: {
+                                required: 'Поле Фамилия обязательно для заполнения',
+                                min: 'Фамилия должен содержать максимум 4 символов',
+                                max: 'Фамилия должен содержать максимум 12 символов',
+                            },
+                            terms: {
+                                required: 'Необходимо согласие',
+                            }
+                        }
                     },
-                    {
-                        login: 'Вход'
+                    login: {
+                        login: 'Вход',
+                        password: 'Пароль',
+                        email: 'Эл. почта',
+                        phone: 'Номер телефона',
+                        privacyPolicy: 'Соглашаетесь с политикой конфиденциальности?',
+                        registration: 'Еще не зарегестрированы?',
+                        validation: {
+                            email: {
+                                error: 'Неправильный эл. адрес',
+                                required: 'Поле Эл. почта обязательно для заполнения'
+                            },
+                            password: {
+                                required: 'Поле пароля обязательно для заполнения',
+                                min: 'Пароль должен содержать минимум 6 символов',
+                                max: 'Пароль должен содержать максимум 12 символов',
+                            },
+                            terms: {
+                                required: 'Необходимо согласие',
+                            }
+                        }
                     }
-
-                ],
+                }
+                ,
                 footer: {
                     categories: [
                         {
@@ -220,12 +280,18 @@ const data = () => {
                         'Дате',
                         'Фильтры',
                     ]
+                },
+                search: {
+                    search: 'Поиск',
+                    results: 'Результаты',
+                    products: 'Продукты'
                 }
             },
 
 
 
             arm: {
+                languages: '/հայ/',
                 menu: [
                     {
                         categorie: 'ԳԼԽԱՎՈՐ',
@@ -359,7 +425,11 @@ const data = () => {
                         button: 'Ցույց տալ ավելին'
                     },
                     {
-                        name: 'Նոր տեսականի'
+                        name: 'Նոր տեսականի',
+                        button: 'Ցույց տալ ավելին'
+                    },
+                    {
+                        name: 'Խորհուրդ է տրվում'
                     },
                     {
                         name: 'Շատ վաճառվող ապրանքներ'
@@ -368,15 +438,67 @@ const data = () => {
                         name: 'Հանրաճանաչ ապրանքանիշեր'
                     }
                 ],
-                registerAndlogin: [
-                    {
-                        register: 'Գրանցում'
+                registerAndlogin: {
+                    register: {
+                        register: 'Գրանցում',
+                        email: 'Էլ հասցե',
+                        password: 'Գաղտնաբառ',
+                        name: 'Անուն',
+                        lastName: 'Ազգանուն',
+                        phone: 'հեռախոսահամար',
+                        privacyPolicy: 'Համաձայն եք Գաղտնիության քաղաքականությանը?',
+                        validation: {
+                            email: {
+                                error: 'Սխալ էլ. հասցե',
+                                required: 'Էլ. հասցե դաշտը պարտադիր է լրացման համար'
+                            },
+                            phoneNumber: {
+                                matches: 'հեռախոսահամարը պետք է սկսվի + -ով և պարունակի միայն թվեր',
+                                required: 'Հեռախոսահամար դաշտը պարտադիր է լրացման համար',
+                            },
+                            password: {
+                                required: 'Գաղտնաբառ դաշտը պարտադիր է լրացման համար',
+                                min: 'Գաղտնաբառը պետք է պարունակի առնվազն 6 նիշ',
+                                max: 'Գաղտնաբառը պետք է պարունակի առավելագույնը 12 նիշ',
+                            },
+                            name: {
+                                required: 'Անուն դաշտը պարտադիր է լրացման համար',
+                                min: 'Անունը պետք է պարունակի առավելագույնը 4 նիշ',
+                                max: 'Անունը պետք է պարունակի առավելագույնը 12 նիշ',
+                            },
+                            lastName: {
+                                required: 'Ազգանուն դաշտը պարտադիր է լրացման համար',
+                                min: 'Ազգանունը պետք է պարունակի առավելագույնը 4 նիշ',
+                                max: 'Ազգանունը պետք է պարունակի առավելագույնը 12 նիշ',
+                            },
+                            terms: {
+                                required: 'Անհրաժեշտ է համաձայնություն',
+                            }
+                        }
                     },
-                    {
-                        login: 'Մուտք'
+                    login: {
+                        login: 'Մուտք',
+                        email: 'Էլ հասցե',
+                        password: 'Գաղտնաբառ',
+                        phone: 'հեռախոսահամար',
+                        registration: 'Դեռ գրանցված չե՞ք։',
+                        privacyPolicy: 'Համաձայն եք Գաղտնիության քաղաքականությանը?',
+                        validation: {
+                            email: {
+                                error: 'Սխալ էլ. հասցե',
+                                required: 'Էլ. հասցե դաշտը պարտադիր է լրացման համար'
+                            },
+                            password: {
+                                required: 'Գաղտնաբառ դաշտը պարտադիր է լրացման համար',
+                                min: 'Գաղտնաբառը պետք է պարունակի առնվազն 6 նիշ',
+                                max: 'Գաղտնաբառը պետք է պարունակի առավելագույնը 12 նիշ',
+                            },
+                            terms: {
+                                required: 'Անհրաժեշտ է համաձայնություն',
+                            }
+                        }
                     }
-
-                ],
+                },
                 footer: {
                     categories: [
                         {
@@ -424,10 +546,63 @@ const data = () => {
                         'Ավելացման Ժամանակի',
                         'Ֆիլտրներ',
                     ]
+                },
+                search: {
+                    search: 'Որոնում',
+                    results: 'Արդյունքներ',
+                    products: 'Ապրանքներ'
                 }
 
             }
         },
+
+        shopAdvertisementSlider: [
+            {
+                textTop: {
+                    arm: 'ԳՈՐԾՈՒՄ Է ԱՊԱՌԻԿ ՎԱՃԱՌՔ',
+                    rus: 'ПРОДАЖА В КРЕДИТ'
+                },
+                textBottom: {
+                    arm: '',
+                    rus: ''
+                },
+                img: shopAdvertisementSliderImage1
+            },
+            {
+                textTop: {
+                    arm: 'ՊՐՈՖԵՍԻՈՆԱԼ ԵՌԱԿՑՄԱՆ ՍԱՐՔԵՐԻ ԵՎ ՊԼԱԶՄԱՅԻՆ ՀԱՏԻՉՆԵՐԻ ԼԱՅՆ ԸՆՏՐԱՆԻ',
+                    rus: 'ШИРОКИЙ ВЫБОР ПРОФЕССИОНАЛЬНОГО СВАРОЧНОГО ОБОРУДОВАНИЯ И ПЛАЗМЕННОЙ РЕЗКИ'
+                },
+                textBottom: {
+                    arm: 'MIG, MAG, MMA, TIG, PLASMA, AC/DC',
+                    rus: 'MIG, MAG, MMA, TIG, PLASMA, AC/DC'
+
+                },
+                img: shopAdvertisementSliderImage3
+            },
+            {
+                textTop: {
+                    arm: 'ԱՅԳԵԳՈՐԾԱԿԱՆ ԳՈՐԾԻՔՆԵՐԻ ԵՎ ՍԱՐՔԱՎՈՐՈՒՄՆԵՐԻ ԼԱՅՆ ԸՆՏՐԱՆԻ',
+                    rus: 'ШИРОКИЙ ВЫБОР САДОВЫХ ИНСТРУМЕНТОВ И ОБОРУДОВАНИЯ'
+                },
+                textBottom: {
+                    arm: 'ԳՈՐԾՈՒՄ Է ՄԱՆՐԱՄԵԾԱԾԱԽ ՎԱՃԱՌՔ',
+                    rus: 'ДЕЙСТВУЕТ ОПТОВО-РОЗНИЧНАЯ ПРОДАЖА'
+                },
+                img: shopAdvertisementSliderImage2
+            },
+            {
+                textTop: {
+                    arm: 'ՇԻՆԱՐԱՐԱԿԱՆ ԳՈՐԾԻՔՆԵՐԻ ԵՎ ՍԱՐՔԱՎՈՐՈՒՄՆԵՐԻ ԼԱՅՆ ԸՆՏՐԱՆԻ',
+                    rus: 'ШИРОКИЙ ВЫБОР СТРОИТЕЛЬНЫХ ИНСТРУМЕНТОВ И ОБОРУДОВАНИЯ'
+                },
+                textBottom: {
+                    arm: 'ԳՈՐԾՈՒՄ Է ՄԱՆՐԱՄԵԾԱԾԱԽ ՎԱՃԱՌՔ',
+                    rus: 'ДЕЙСТВУЕТ ОПТОВО-РОЗНИЧНАЯ ПРОДАЖА'
+                },
+                img: shopAdvertisementSliderImage4
+            },
+        ],
 
         products: [
             {
@@ -439,7 +614,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Мощность 1500 Вт, Диаметр диска 125 мм, Посадочный диаметр 22.2 мм',
                 salePrice: 13002,
                 price: 25000,
-                recommended:true,
+                recommended: true,
                 news: true,
                 categorie: {
                     arm: 'ԳՈՐԾԻՔՆԵՐ',
@@ -459,7 +634,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: 100882,
                 price: 295000,
-                recommended:false,
+                recommended: false,
                 news: true,
                 categorie: {
                     arm: 'ԳՈՐԾԻՔՆԵՐ',
@@ -479,7 +654,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: 3121,
                 price: 24000,
-                recommended:false,
+                recommended: false,
                 news: true,
                 categorie: {
                     arm: 'ԳՈՐԾԻՔՆԵՐ',
@@ -500,7 +675,7 @@ const data = () => {
                 salePrice: '',
                 price: 61000,
                 news: true,
-                recommended:true,
+                recommended: true,
                 categorie: {
                     arm: 'ԳՈՐԾԻՔՆԵՐ',
                     rus: 'ИНСТРУМЕНТЫ',
@@ -519,7 +694,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: 13122,
                 price: 151000,
-                recommended:false,
+                recommended: false,
                 news: true,
                 categorie: {
                     arm: 'ԳՈՐԾԻՔՆԵՐ',
@@ -539,7 +714,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: '',
                 price: 161000,
-                recommended:false,
+                recommended: false,
                 news: true,
                 categorie: {
                     arm: 'ԳՈՐԾԻՔՆԵՐ',
@@ -559,6 +734,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: 55000,
                 price: 1655000,
+                recommended: true,
                 news: true,
                 categorie: {
                     arm: 'ԳՅՈՒՂԱՏՆՏԵՍԱԿԱՆ ԳՈՐԾԻՔՆԵՐ',
@@ -579,6 +755,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: 55000,
                 price: 1155000,
+                recommended: true,
                 news: false,
                 categorie: {
                     arm: 'ԳՅՈՒՂԱՏՆՏԵՍԱԿԱՆ ԳՈՐԾԻՔՆԵՐ',
@@ -598,6 +775,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: '',
                 price: 55000,
+                recommended: false,
                 news: true,
                 categorie: {
                     arm: 'ԳՅՈՒՂԱՏՆՏԵՍԱԿԱՆ ԳՈՐԾԻՔՆԵՐ',
@@ -617,6 +795,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: '',
                 price: 50000,
+                recommended: true,
                 news: false,
                 categorie: {
                     arm: 'ԳՅՈՒՂԱՏՆՏԵՍԱԿԱՆ ԳՈՐԾԻՔՆԵՐ',
@@ -636,6 +815,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: '',
                 price: 20000,
+                recommended: false,
                 news: true,
                 categorie: {
                     arm: 'ԳՅՈՒՂԱՏՆՏԵՍԱԿԱՆ ԳՈՐԾԻՔՆԵՐ',
@@ -655,6 +835,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: '',
                 price: 25000,
+                recommended: false,
                 news: false,
                 categorie: {
                     arm: 'ԳՅՈՒՂԱՏՆՏԵՍԱԿԱՆ ԳՈՐԾԻՔՆԵՐ',
@@ -674,6 +855,7 @@ const data = () => {
                 characteristic: 'Напряжение 220 В ,Max мощность 3.8 кВт ,Min ток 20 А',
                 salePrice: '',
                 price: 20000,
+                recommended: true,
                 news: false,
                 categorie: {
                     arm: 'ԱՔՍԵՍՈՒԱՐՆԵՐ',
@@ -693,6 +875,7 @@ const data = () => {
                 characteristic: '',
                 salePrice: '',
                 price: 5000,
+                recommended: false,
                 news: false,
                 categorie: {
                     arm: 'ԱՔՍԵՍՈՒԱՐՆԵՐ',
@@ -712,6 +895,7 @@ const data = () => {
                 characteristic: 'Угольные щетки для электроинструмента',
                 salePrice: '',
                 price: 2000,
+                recommended: true,
                 news: false,
                 categorie: {
                     arm: 'ԱՔՍԵՍՈՒԱՐՆԵՐ',
@@ -731,6 +915,7 @@ const data = () => {
                 characteristic: 'Запчасть для плиты',
                 salePrice: '',
                 price: 1000,
+                recommended: false,
                 news: true,
                 categorie: {
                     arm: 'ՊԱՀԵՍՏԱՄԱՍԵՐ',
@@ -750,6 +935,7 @@ const data = () => {
                 characteristic: 'Совместимый инструмент Дрель, Отвертка, Шуруповерт',
                 salePrice: '',
                 price: 5000,
+                recommended: false,
                 news: true,
                 categorie: {
                     arm: 'ՊԱՀԵՍՏԱՄԱՍԵՐ',
@@ -769,6 +955,7 @@ const data = () => {
                 characteristic: 'Фильтр воздушный для бензоинструмента',
                 salePrice: '',
                 price: 7000,
+                recommended: true,
                 news: false,
                 categorie: {
                     arm: 'ՊԱՀԵՍՏԱՄԱՍԵՐ',
@@ -788,6 +975,7 @@ const data = () => {
                 characteristic: 'Запчасть для бензоинструмента',
                 salePrice: '',
                 price: 500,
+                recommended: false,
                 news: false,
                 categorie: {
                     arm: 'ՊԱՀԵՍՏԱՄԱՍԵՐ',
@@ -807,6 +995,7 @@ const data = () => {
                 characteristic: 'Запчасть для бензоинструмента',
                 salePrice: '',
                 price: 1000,
+                recommended: false,
                 news: false,
                 categorie: {
                     arm: 'ՊԱՀԵՍՏԱՄԱՍԵՐ',
@@ -826,6 +1015,7 @@ const data = () => {
                 characteristic: 'Класс товара - бытовой',
                 salePrice: '',
                 price: 70000,
+                recommended: false,
                 news: false,
                 categorie: {
                     arm: 'ԳԵՆԵՐԱՏՈՐՆԵՐ',

@@ -1,0 +1,41 @@
+.shopAdvertisement {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .shopAdvertisementImg {
+        width: 100%;
+        height: 700px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .overlayShopAdvertisement {
+        color: white;
+        padding:0 100px ;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.604);
+
+        h2 {
+            font-size: 50px;
+        }
+
+        h3 {
+            font-size: 35px
+        }
+    }
+}

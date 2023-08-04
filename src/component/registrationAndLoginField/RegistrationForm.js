@@ -1,16 +1,21 @@
 import './loginAndRegistrationForm.scss'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
-import { GrClose } from "react-icons/gr";
+import { GrClose } from 'react-icons/gr';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const RegistrationForm = ({ handleCloseModals }) => {
     const navigate = useNavigate()
     const location = useLocation()
+    const language = useSelector(state => state.language.language.registerAndlogin.register)
+    const validationLanguage = useSelector(state => state.language.language.registerAndlogin.register.validation)
+    console.log(validationLanguage)
     return (
         <Formik
             initialValues={{
                 email: '',
+                phoneNumber: '+374',
                 password: '',
                 name: '',
                 lastName: '',
@@ -19,27 +24,28 @@ const RegistrationForm = ({ handleCloseModals }) => {
 
             validationSchema={Yup.object({
                 email: Yup.string()
-                    .email('неправильный эл. адрес')
-                    .required('Поле Эл. почта обязательно для заполнения'),
-
+                    .email(validationLanguage.email.error)
+                    .required(validationLanguage.email.required),
+                phoneNumber: Yup.string()
+                    .matches(/^\+[0-9]+$/, validationLanguage.phoneNumber.matches)
+                    .required(validationLanguage.phoneNumber.required),
                 password: Yup.string()
-                    .min(6, 'Пароль должен содержать минимум 6 символов')
-                    .max(12, 'Пароль должен содержать максимум 12 символов')
-                    .required('Поле пароля обязательно для заполнения'),
-
+                    .min(6, validationLanguage. password.min)
+                    .max(12, validationLanguage. password.max)
+                    .required(validationLanguage.password.required),
                 name: Yup.string()
-                    .min(4, "Имя должен содержать максимум 4 символов")
-                    .max(12, 'Имя должен содержать максимум 12 символов')
-                    .required('Поле Имя обязательно для заполнения'),
+                    .min(4, validationLanguage.name.min)
+                    .max(12, validationLanguage.name.max)
+                    .required(validationLanguage.name.required),
 
                 lastName: Yup.string()
-                    .min(4, "Фамилия должен содержать максимум 4 символов")
-                    .max(16, 'Фамилия  должен содержать максимум 16 символов')
-                    .required('Поле Фамилия обязательно для заполнения'),
+                    .min(4, validationLanguage.lastName.min)
+                    .max(16, validationLanguage.lastName.max)
+                    .required(validationLanguage.lastName.required),
 
                 terms: Yup.boolean()
-                    .required('Необходимо согласие')
-                    .oneOf([true], 'Необходимо согласие')
+                    .required(validationLanguage.terms.required)
+                    .oneOf([true], validationLanguage.terms.required)
             })}
 
             onSubmit={values => {
@@ -56,57 +62,65 @@ const RegistrationForm = ({ handleCloseModals }) => {
                     </Link>
 
                 </div>
-                <h2>Регистрация</h2>
-                <Form className="form">
-                    <label htmlFor="email">Эл. почта</label>
+                <h2>{language.register}</h2>
+                <Form className='form'>
+                    <label htmlFor='email'>{language.email}</label>
                     <Field
-                        id="email"
-                        name="email"
-                        type="email"
+                        id='email'
+                        name='email'
+                        type='email'
                     />
-                    <ErrorMessage className={'error'} name='email' component="div" />
+                    <ErrorMessage className={'error'} name='email' component='div' />
 
 
-                    <label htmlFor="name">Пароль</label>
+                    <label htmlFor='phoneNumber'>{language.phone}</label>
                     <Field
-                        id="password"
-                        name="password"
-                        type="password"
+                        id='phoneNumber'
+                        name='phoneNumber'
+                        type='tel'
                     />
-                    <ErrorMessage className={'error'} name='password' component="div" />
+                    <ErrorMessage className={'error'} name='phoneNumber' component='div' />
 
 
-                    <label htmlFor="name">Имя</label>
+                    <label htmlFor='password'>{language.password}</label>
                     <Field
-                        id="name"
-                        name="name"
-                        type="text"
+                        id='password'
+                        name='password'
+                        type='password'
                     />
-                    <ErrorMessage className={'error'} name='name' component="div" />
+                    <ErrorMessage className={'error'} name='password' component='div' />
 
-                    <label htmlFor="name">Фамилия</label>
+
+                    <label htmlFor='name'>{language.name}</label>
                     <Field
-                        id="lastName"
-                        name="lastName"
-                        type="text"
+                        id='name'
+                        name='name'
+                        type='text'
                     />
-                    <ErrorMessage className={'error'} name='lastName' component="div" />
+                    <ErrorMessage className={'error'} name='name' component='div' />
 
-                    <label className="checkbox">
+                    <label htmlFor='lastName'>{language.lastName}</label>
+                    <Field
+                        id='lastName'
+                        name='lastName'
+                        type='text'
+                    />
+                    <ErrorMessage className={'error'} name='lastName' component='div' />
+
+                    <label className='checkbox'>
                         <Field
-                            name="terms"
-                            type="checkbox"
-
+                            name='terms'
+                            type='checkbox'
                         />
                         <p>
-                            Соглашаетесь с политикой конфиденциальности?
+                            {language.privacyPolicy}
                         </p>
                     </label>
 
-                    <ErrorMessage className={'error'} name="terms" component="div" />
+                    <ErrorMessage className={'error'} name='terms' component='div' />
 
                     <div className='onSubmitButton'>
-                        <button type="submit" className='button'><p>Регистрация</p></button>
+                        <button type='submit' className='button'><p>{language.register}</p></button>
                     </div>
                 </Form>
             </div>

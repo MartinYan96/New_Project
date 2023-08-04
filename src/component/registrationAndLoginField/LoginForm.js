@@ -1,13 +1,17 @@
+import './loginAndRegistrationForm.scss'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
-import './loginAndRegistrationForm.scss'
 import { GrClose } from "react-icons/gr";
 
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const LoginForm = ({ handleCloseModals, linkOnRegistrationOnLoginPage }) => {
+    const language = useSelector(state => state.language.language.registerAndlogin.login)
+    const validationLanguage = useSelector(state => state.language.language.registerAndlogin.login.validation)
     const location = useLocation()
     const navigate = useNavigate()
+
 
     return (
         <Formik
@@ -18,8 +22,16 @@ const LoginForm = ({ handleCloseModals, linkOnRegistrationOnLoginPage }) => {
             }}
 
             validationSchema={Yup.object({
-                email: Yup.string().email('ne pravilniy mail adress').required('eto obezatelnoe pole'),
-                terms: Yup.boolean().required('neobxodimo soglasie').oneOf([true], 'neobxodimo soglasie')
+                email: Yup.string()
+                    .email(validationLanguage.email.error)
+                    .required(validationLanguage.email.required),
+                password: Yup.string()
+                    .min(6, validationLanguage.password.min)
+                    .max(12, validationLanguage.password.max)
+                    .required(validationLanguage.password.required),
+                terms: Yup.boolean()
+                    .required(validationLanguage.terms.required)
+                    .oneOf([true], validationLanguage.terms.required)
             })}
 
             onSubmit={values => {
@@ -34,9 +46,9 @@ const LoginForm = ({ handleCloseModals, linkOnRegistrationOnLoginPage }) => {
                         <GrClose className='cloaseModalIcon' />
                     </Link>
                 </div>
-                <h2>Вход</h2>
+                <h2>{language.login}</h2>
                 <Form className="form">
-                    <label htmlFor="email">Ваша почта</label>
+                    <label htmlFor="email">{language.email}</label>
                     <Field
                         id="email"
                         name="email"
@@ -45,7 +57,7 @@ const LoginForm = ({ handleCloseModals, linkOnRegistrationOnLoginPage }) => {
                     <ErrorMessage className={'error'} name='email' component="div" />
 
 
-                    <label htmlFor="name">Пароль</label>
+                    <label htmlFor="password">{language.password}</label>
                     <Field
                         id="password"
                         name="password"
@@ -60,16 +72,16 @@ const LoginForm = ({ handleCloseModals, linkOnRegistrationOnLoginPage }) => {
                             type="checkbox"
 
                         />
-                        Соглашаетесь с политикой конфиденциальности?
+                        {language.privacyPolicy}
                     </label>
 
                     <ErrorMessage className={'error'} name="terms" component="div" />
                     <div className='onSubmitButton'>
 
-                        <button type="submit" className='button'><p>Войти</p></button>
+                        <button type="submit" className='button'><p>{language.login}</p></button>
 
                     </div>
-                    <Link to={linkOnRegistrationOnLoginPage(`${location.pathname}?modal=registration`)} className='registrationOnLoginPage'>Еще не зарегестрированы?</Link>
+                    <Link to={linkOnRegistrationOnLoginPage(`${location.pathname}?modal=registration`)} className='registrationOnLoginPage'>{language.registration}</Link>
                 </Form>
             </div>
         </Formik >
